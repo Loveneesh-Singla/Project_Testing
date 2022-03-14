@@ -6,11 +6,22 @@ import Timeslots_utils from "./Create_Timeslots_utils";
 
 class Blackout_Utils{
 
-   async change_month(i){
+   async change_month(i,callFrom){
         if(i>5){
             await CalenderPage.change_month_button.click();
             await CalenderPage.change_month_button.click();
-        }else await CalenderPage.change_month_button.click();
+            if(callFrom === "delete"){
+                await CalenderPage.change_month_button.click();
+                await CalenderPage.change_month_button.click();
+            }
+        }else {
+            await CalenderPage.change_month_button.click();
+            if(callFrom === "delete"){
+                await CalenderPage.change_month_button.click();
+                await CalenderPage.change_month_button.click();
+            }
+            
+        }
     }
 
    async reach_sel_timeslot_date(month_date_index,Mani_Date){
@@ -53,7 +64,7 @@ class Blackout_Utils{
             await browser.pause(1000);
             await CalenderPage.vist_calender_page();
             {callFrom === "timeslot" ? await Timeslots_utils.changeMonth(i)
-             :await this.change_month(i)}
+             :await this.change_month(i,callFrom)}
             await browser.pause(2000);
 
             let timeslot = await CalenderPage.timeslot_available(row,col);

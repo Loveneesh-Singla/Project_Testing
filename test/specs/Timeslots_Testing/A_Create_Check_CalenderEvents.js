@@ -1,11 +1,12 @@
 
-import LoginPage from '../pages/Login_Page'
-import CalenderEventPage from '../pages/CalenderEvents_Page'
+import Login_Page from '../../pages/Login_Page';
+import CalenderEventPage from '../../pages/CalenderEvents_Page';
+
 
 describe("Test TimeSlots",()=>{
 
     it("Login" , async ()=>{
-        await LoginPage.doLogin();
+        await Login_Page.doLogin();
     })
 
     it("create Calender Events",async()=>{

@@ -1,5 +1,5 @@
-import LoginPage from '../pages/Login_Page';
-import Blackout_Utils from '../Utils/Check_Blackout_Delete_utils';
+import LoginPage from '../../pages/Login_Page';
+import Blackout_Utils from '../../Utils/Check_Blackout_Delete_utils';
 
 describe("Check Blackout Series Is Working", ()=>{
 

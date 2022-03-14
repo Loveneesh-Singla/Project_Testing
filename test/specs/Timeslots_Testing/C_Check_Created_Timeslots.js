@@ -1,5 +1,5 @@
-import timeslot_utils from '../Utils/Check_Blackout_Delete_utils';
-import LoginPage from '../pages/Login_Page';
+import timeslot_utils from '../../Utils/Check_Blackout_Delete_utils';
+import LoginPage from '../../pages/Login_Page';
 
 
 describe("Are Timeslots Correct",()=>{

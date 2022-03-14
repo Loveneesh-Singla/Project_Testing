@@ -1,5 +1,5 @@
-import LoginPage from '../pages/Login_Page';
-import Delete_utils from '../Utils/Check_Blackout_Delete_utils';
+import LoginPage from '../../pages/Login_Page';
+import Delete_utils from '../../Utils/Check_Blackout_Delete_utils';
 
 describe("Check Deleing Timeslot is Working", ()=>{
 

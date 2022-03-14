@@ -1,7 +1,9 @@
 
-import CalenderPage from '../pages/CalenderPage';
-import LoginPage from '../pages/Login_Page';
-import TimeSlots_Utils from '../Utils/Create_Timeslots_utils';
+import CalenderPage from "../../pages/CalenderPage";
+import LoginPage from '../../pages/Login_Page';
+import TimeSlots_Utils from '../../Utils/Create_Timeslots_utils';
+
+
 
 describe("Create Timeslots", ()=>{
 
