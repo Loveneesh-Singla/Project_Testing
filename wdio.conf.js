@@ -24,14 +24,11 @@ exports.config = {
         // './test/specs/**/Create_Check_CalenderEvents.js'
         // './test/specs/**/Create_Timeslots.js'
         // './test/specs/**/Check_Created_Timeslots.js'
-        // './test/specs/**/Check_Blackout.js'
+        './test/specs/**/Check_Blackout.js'
         // './test/specs/**/Check_Undo_Blackout.js'
         // './test/specs/**/Check_Blackout_Series.js'
         // './test/specs/**/Check_Delete_Timeslot.js'
-        './test/specs/**/Check_Delete_Timeslots_Series.js'
-        
-
-        
+        // './test/specs/**/Check_Delete_Timeslots_Series.js'
     ],
     // Patterns to exclude.
     exclude: [

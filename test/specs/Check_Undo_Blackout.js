@@ -11,6 +11,8 @@ describe("Check Blackout is working", ()=>{
     it("Undo Blackout timeslot in Manifest and check in Reservation", async()=>{
         let checked = false;
         checked = await Blackout_Utils.test(10,checked,"Undo Blackout",true,"single","undo_blackout");
+        if(!checked)
+        console.log("========================> Please create a blackout timeslot in the first column of  current month's next month or next to next month <========================")
         await expect(checked).toEqual(true);
     })
 })
