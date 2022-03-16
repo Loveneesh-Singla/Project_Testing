@@ -34,25 +34,16 @@ class TimeSlots_Utils{
 
     async changeMonth(i){
         if(i<=5) await CalenderPage.change_month_button.click();
-        else if(i>5 && i <= 10){
-            await CalenderPage.change_month_button.click(); await browser.pause(500);
-            await CalenderPage.change_month_button.click(); await browser.pause(500);
-            }
-        else if(i>10 && i <=15){
-                for(let i=0;i<3;i++){
-                    await CalenderPage.change_month_button.click(); await browser.pause(500); 
-                }
-            }
-        else if(i>15 && i<=20){
-                for(let i=0;i<4;i++){
-                    await CalenderPage.change_month_button.click(); await browser.pause(500);
-                }
-            }
-        else{
-                for(let i=0;i<5;i++){
-                    await CalenderPage.change_month_button.click(); await browser.pause(500); 
-                }
-            }
+        else if(i>5 && i <= 10) { await this.Change_Month(2)}
+        else if(i>10 && i <= 15){ await this.Change_Month(3)}
+        else if(i>15 && i <= 20){ await this.Change_Month(4)}
+        else{ await this.Change_Month(5) }
+    }
+
+    async Change_Month(n){
+        for(let j=0 ;j<n;j++){
+            await CalenderPage.change_month_button.click(); await browser.pause(500); 
+        }
     }
 }
 

@@ -8,7 +8,7 @@ describe("Check Deleing Timeslot is Working", ()=>{
     })
 
 
-    it("Delete a timeslot in Manifest and check in manifest", async()=>{
+    it("Delete a timeslot in Manifest and check in reservation", async()=>{
         let checked = false;
         checked = await Delete_utils.test(10,checked,"Blackout",false,"single","delete");
         if(!checked)
