@@ -25,9 +25,11 @@ class Reservation_Testing_Utils{
     }
 
     async fill_passenger_details(numPassengers,tandemPackages,videoOptions){
+        let jumperNames = [];
         for(let i=65;i<numPassengers+65;i++){
             let nums = await this.get_randomNum(i);
             let name = await this.get_fName_lname(i);
+            await jumperNames.push(name);
             await this.set_fname_lname(i,name);
             if(i===65){
                await this.set_email_phone(name,nums);
@@ -40,6 +42,7 @@ class Reservation_Testing_Utils{
             const videoOption = await this.get_video_option(i-64,videoOptions);
             await this.select_tandemP_videoO(i,tandemPack,videoOption);
         }
+        return jumperNames;
     }
 
     get_fName_lname(i){
@@ -55,7 +58,7 @@ class Reservation_Testing_Utils{
         let num3 = Math.floor((Math.random() * 10) + 1)+i;
         let num4 = Math.floor((Math.random() * 10) + 1)+i;
         let num5 = Math.floor((Math.random() * 10) + 1)+i;
-        return [num1,num2,num3,num4]
+        return [num1,num2,num3,num4,num5]
     }
 
 
@@ -68,7 +71,7 @@ class Reservation_Testing_Utils{
     }
 
     async accept_terms_conditions(payOption){
-        await browser.pause(500);
+        // await browser.pause(500);
         const terms_condition_btn= await ReservationPage.terms_condition_button(payOption);
         await terms_condition_btn.click();
         await ReservationPage.terms_condition_accept_btn.waitForDisplayed({timeout:10000});
@@ -88,16 +91,16 @@ class Reservation_Testing_Utils{
     async select_tandemP_videoO(i,tandemPack,videoOption){
         const TandemPack = await ReservationPage.tandem_option_sel(i-64);
         await TandemPack.selectByIndex(tandemPack);
-        await browser.pause(1500);
+        // await browser.pause(1500);
         const selectVideo =  await ReservationPage.video_option_sel(i-64);
         await selectVideo.selectByIndex(videoOption);
-        await browser.pause(1500);
+        // await browser.pause(1500);
     }
 
     async set_email_phone(name,nums){
         await ReservationPage.email_input_sel.setValue(`${name[0]}_${name[1]}${nums[1],nums[3]}@gmail.com`)
         await ReservationPage.phoneNo_input_sel.setValue(`646648${nums[0]}${nums[1]}`)
-        await browser.pause(500);
+        // await browser.pause(500);
     }
 
     async pay_makeReservation(payOption){
@@ -106,7 +109,7 @@ class Reservation_Testing_Utils{
         const payNowBtn = await ReservationPage.pay_now_btn(payOption);
         await payNowBtn.click();
         const reservationModal = await ReservationPage.Transitional_Modal.transitional_modal;
-        await browser.pause(4000);
+        await browser.pause(1000);
         const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;
         await browser.switchToFrame(Tansitional_iframe); 
         if(reservationModal){

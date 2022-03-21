@@ -1,5 +1,3 @@
-
-
 class TandemPackagesPage{
 
     async visit_tandem_packages_page(){

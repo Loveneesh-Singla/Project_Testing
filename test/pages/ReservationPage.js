@@ -16,6 +16,7 @@ class ReservationPage{
 
     get next_month_sel(){
         return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div[1]/button[4]');
+       
     }
 
     async date_sel(month_date_index){

@@ -1,5 +1,3 @@
-
-
 import LoginPage from '../../pages/Login_Page';
 import Blackout_Utils from '../../Utils/Check_Blackout_Delete_utils';
 

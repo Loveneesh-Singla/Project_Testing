@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cli": "^7.16.16"
+    "@wdio/cli": "^7.16.16",
+    "mongodb": "^4.4.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",

@@ -32,19 +32,25 @@ exports.config = {
         // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
         // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+        // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
         // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
-        // './test/specs/Reservations_Testing/C_Reserve_1_T_NV_FP_NT.js',
-        // './test/specs/Reservations_Testing/D_Reserve_1_T_NV_FP_TA.js',
+        // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
+        // './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
+        // './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
+        // './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
         // './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
+        // './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
         // './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
         // './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
+        // './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
         // './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
         // './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
         // './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
-        // './test/specs/Reservations_Testing/K_Reserve_3_T_FP_TA_2NV.js',
+        // './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
+        // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
         // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
         // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js'
-        
+        // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         
     ],
     // Patterns to exclude.
@@ -70,19 +76,29 @@ exports.config = {
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
+            './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
+            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            './test/specs/Tandem_Packages/Create_Tandem_packages.js',
             './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+            './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
             './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
+            './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
             './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
+            './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
             './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
             './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
+            './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
             './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
             './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
+            './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
             './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
             './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
             './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
-            './test/specs/Reservations_Testing/K_Reserve_3_T_FP_TA_2NV.js',
+            './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
+            './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
             './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
-            './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js'
+            './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
+            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ]
     },
     //
@@ -112,7 +128,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true
