@@ -75,10 +75,12 @@ exports.config = {
             './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
-        Reservations:[
+        Create_Tandem_Packages:[
             './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
             './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
+        ],
+        Reservations:[
             './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
             './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
             './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
