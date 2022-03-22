@@ -61,11 +61,11 @@ class Blackout_Utils{
 
         for(let i = 1; i <=numOfTest ; i++){ 
 
-            await browser.pause(1000);
+            await browser.pause(500);
             await CalenderPage.vist_calender_page();
             {callFrom === "timeslot" ? await Timeslots_utils.changeMonth(i)
              :await this.change_month(i,callFrom)}
-            await browser.pause(2000);
+            await browser.pause(500);
 
             let timeslot = await CalenderPage.timeslot_available(row,col);
             let Mani_Month,Mani_Date,Mani_Text;
@@ -84,7 +84,7 @@ class Blackout_Utils{
                           :callFrom!=="timeslot" && await this.blackoutSeries(callFrom);
                         }
                         
-                        await browser.pause(1000);
+                        await browser.pause(500);
 
                         await ReservationPage.vist_reservation_page();
                         let pack_button_index = 1;

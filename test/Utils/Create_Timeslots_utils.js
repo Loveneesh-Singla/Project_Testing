@@ -42,7 +42,8 @@ class TimeSlots_Utils{
 
     async Change_Month(n){
         for(let j=0 ;j<n;j++){
-            await CalenderPage.change_month_button.click(); await browser.pause(500); 
+            await CalenderPage.change_month_button.click(); 
+            // await browser.pause(500); 
         }
     }
 }

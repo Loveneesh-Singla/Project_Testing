@@ -31,6 +31,8 @@ exports.config = {
         // './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
         // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
         // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
+
+
         // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
         // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
         // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
@@ -50,6 +52,8 @@ exports.config = {
         // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
         // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
         // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js'
+
+
         // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         
     ],
@@ -70,7 +74,7 @@ exports.config = {
             './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
             './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
         ],
-        Create_Tandem_Packages:[
+        Reservations_Prerequisites:[
             './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
             './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
@@ -114,7 +118,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 3,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -125,7 +129,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 3,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true
