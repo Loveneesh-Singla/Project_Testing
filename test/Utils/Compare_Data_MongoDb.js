@@ -11,6 +11,7 @@ class MongoDB_Data{
             let firstName = jumperNames[i][0].charAt(0)+jumperNames[i][0].slice(1,jumperNames[i][0].length).toLowerCase();
             let lastName = jumperNames[i][1].charAt(0)+jumperNames[i][1].slice(1,jumperNames[i][1].length).toLowerCase();
             const database = await Mongo_DB.createConnection();
+            await browser.pause(1500);
             const tandemStudent = await database.collection('tandemstudents').findOne({firstname:firstName,lastname:lastName});
             await browser.pause(2500);
             const selectedTandemPack = await database.collection('items').findOne({item:tandemStudent.tandemPackage});

@@ -70,11 +70,6 @@ exports.config = {
             './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
             './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
         ],
-        Reservations_Prerequisites:[
-            './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
-            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-            './test/specs/Tandem_Packages/Create_Tandem_packages.js',
-        ],
         Create_Tandem_Packages:[
             './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
             './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
@@ -100,7 +95,7 @@ exports.config = {
             './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
             './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
             './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
-            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ]
     },
     //
