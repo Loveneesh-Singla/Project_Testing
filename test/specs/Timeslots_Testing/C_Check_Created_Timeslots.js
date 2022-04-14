@@ -10,7 +10,7 @@ describe("Are Timeslots Correct",()=>{
 
     it("Check timeslots are showing correctly on Reservation",async()=>{
         let checked = false;
-        checked = await timeslot_utils.test(4,checked,"Blackout",true,"single","timeslot");
+        checked = await timeslot_utils.test(25,checked,"Blackout",true,"single","timeslot");
         await expect(checked).toEqual(true);
 
     })

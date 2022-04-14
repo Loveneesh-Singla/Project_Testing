@@ -10,7 +10,7 @@ describe("Check Deleing Timeslot is Working", ()=>{
 
     it("Delete a timeslot in Manifest and check in reservation", async()=>{
         let checked = false;
-        checked = await Delete_utils.test(3,checked,"Blackout",false,"single","delete");
+        checked = await Delete_utils.test(10,checked,"Blackout",false,"single","delete");
         if(!checked)
             console.log("========================> Please create an un blackout timeslot in the first column of  current month's next month or next to next month <========================")
         await expect(checked).toEqual(true);

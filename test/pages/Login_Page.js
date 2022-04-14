@@ -14,6 +14,7 @@ class LoginPage{
         await $('[name=password]').setValue("Mesquite123!");
         await this.submit_btn.click();
         await expect(browser).toHaveUrl("http://localhost:5002/load-manager");
+        await browser.pause(2000);
     }
 }
 

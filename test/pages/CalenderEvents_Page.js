@@ -30,6 +30,7 @@ class CalenderEventsPage{
     }
 
     async create_event(eventName, eventCat){
+        await browser.pause(2000);
         await this.add_event_btn.click();
         await this.event_name_input_sel.setValue(eventName);
         await this.event_category_input_sel.selectByIndex(eventCat)

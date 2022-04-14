@@ -99,7 +99,7 @@ exports.config = {
             './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
             './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
             './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
-            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ]
     },
     //
