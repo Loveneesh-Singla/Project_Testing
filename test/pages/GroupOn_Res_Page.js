@@ -10,6 +10,10 @@ class GroupOnReservationPage {
     get groupOnCodeInput(){
         return $('//*[@id="reservationForm"]/div/div[1]/div[2]/div/div/input');
     }
+
+    get groupon_pack_header(){
+        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div/div');
+    }
 }
 
 

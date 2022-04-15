@@ -1,6 +1,7 @@
 import GroupOnReservationPage from '../../pages/GroupOn_Res_Page';
 import GroupResTestingUtils from '../../Utils/GroupOn_Res_Testing_Utils'
 import MongoDB_Data from '../../Utils/Compare_Data_MongoDb';
+import JumpsCodes from '../../Data/1_jumps_codes'
 
 describe("Reserve 1 GroupOn Ticket",()=>{
 
@@ -8,10 +9,14 @@ describe("Reserve 1 GroupOn Ticket",()=>{
         const numOfTickets = 1;
         // const videoOptions = ["NT"];
         // const tandemPackages = ["NT"];
+
         await GroupOnReservationPage.vist_groupon_reservation_page();
         await browser.pause(500);
-        await GroupResTestingUtils.set_groupOn_code();
-        await browser.pause(500);
+
+        const codes = await JumpsCodes.get_1_codes()
+        
+        await GroupResTestingUtils.set_groupOn_code(codes);
+        await browser.pause(1500);
         // Date index is the index of date in calender index starts from 1 
         // The very first date in the calender is at index 1 then index increases by 1 
         // const DateIndex = 15;
