@@ -97,9 +97,9 @@ class ReservationPage{
         return await $(`//*[@id="reservationForm"]/div/div[${index}]/div/div/div/button`);
     }
 
-   get Transitional_Modal(){
+    get Transitional_Modal(){
        return Transitional_Modal;
-   }
+    }
 
 
     async pay_option_radio_btn(type){
