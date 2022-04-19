@@ -103,7 +103,7 @@ exports.config = {
         ],
         GroupOn_Res_Prerequisites:[
             './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
-            // './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
+            './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
         ],
         GroupOn_Reservations:[
             './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',

@@ -13,10 +13,20 @@ class GroupOnPackagesPage{
     }
 
     get upload_file_input_sel(){
-        return $('//*[@id="3319aec5-9e34-4b97-a3b1-04882ac23a10"]');
+        return $('.react-file-reader-input');
     }
 
+    get num_tickets_input_sel(){
+        return $('//*[@id="modal-main"]/div/div[2]/form/div[5]/div/input');
+    }
 
+    get tandem_pack_sel(){
+        return $('//*[@id="modal-main"]/div/div[2]/form/div[6]/div/select');
+    }
+
+    get submit_btn(){
+        return $('//*[@id="modal-main"]/div/div[2]/form/div[8]/div/button[1]');
+    }
 }
 
 

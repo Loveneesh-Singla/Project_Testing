@@ -84,7 +84,6 @@ class GroupResTestingUtils {
         await this.accept_terms_conditions();
         const payNow = await GroupOn_Res_Page.payNow();
         const btnText = await payNow.getText();
-        console.log(btnText,"<===============btnText")
         await payNow.click();
         if(btnText === "Pay Now"){
         const GroupOnResModal = await GroupOn_Res_Page.Transitional_Modal.transitional_modal;
