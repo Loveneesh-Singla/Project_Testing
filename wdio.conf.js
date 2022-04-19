@@ -102,10 +102,15 @@ exports.config = {
             // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         GroupOn_Res_Prerequisites:[
-            './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js'
+            './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
+            // './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
         ],
         GroupOn_Reservations:[
-            './test/specs/GroupOn_Reservations_Testing/A_GR_1_T.js'
+            './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
+            './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
+            './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
+            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
+            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
         ]
     },
     //

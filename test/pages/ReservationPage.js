@@ -22,7 +22,7 @@ class ReservationPage{
     async date_sel(month_date_index){
         return await $(`//*[@id="reservationForm"]/div/div[1]/div[3]/div[2]/div/div/div/div[2]/button[${month_date_index}]/abbr`)
     }
-
+                       
     async date_btn_sel(month_date_index){
         return await $(`//*[@id="reservationForm"]/div/div[1]/div[3]/div[2]/div/div/div/div[2]/button[${month_date_index}]`)
     }

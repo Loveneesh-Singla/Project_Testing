@@ -2,7 +2,7 @@ import Login_Page from '../../pages/Login_Page';
 import TandemPackagesPage from '../../pages/Tandem_Packages_Page';
 import Tandem_Packages_Utils from '../../Utils/Tandem_Packages_Utils';
 
-describe("Create Tandem Packages", () =>{
+describe("Create GroupOn Tandem Packages", () =>{
 
     it("Login" , async ()=>{
         await Login_Page.doLogin();
