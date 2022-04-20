@@ -108,6 +108,11 @@ class ReservationPage{
     async get_invoice_total_val(){
         return await $('//*[@id="amountTotal"]').getText();
     }
+
+    async get_deposit_amount_span(){
+        return await $('//*[@id="reservationForm"]/div/div[3]/div/div[1]/div[2]/span[2]').getText();
+    }
+
     async pay_option_radio_btn(type){
         let index;
         if(type==="full") index = 1;
