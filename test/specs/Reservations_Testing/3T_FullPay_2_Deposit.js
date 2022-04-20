@@ -6,7 +6,7 @@ import Manifest_Reservation_Testing_Utils from '../../Utils/Manifest_Reservation
 
 describe("Reserve three tickets first full pay then deposit & tandem package is taxble",()=>{
 
-    it("Three tickets with first full pay then deposit, selected tandem package and one video is taxble and second jumper never selected video, third jumper second non-taxble video & weekend",async()=>{
+    it("Three tickets with first full pay then deposit, selected tandem package and one video is taxble and second jumper never selected video, third jumper selected non-taxble video & weekend",async()=>{
         let numOfTickets = 3;
         let videoOptions = ["TA","","NT"]
         const tandemPackages = ["TA","TA","TA"];
@@ -28,9 +28,5 @@ describe("Reserve three tickets first full pay then deposit & tandem package is 
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend,payOption);
         await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal);
-
     })
-
 })
-
-

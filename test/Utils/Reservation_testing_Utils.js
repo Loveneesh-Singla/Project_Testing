@@ -17,7 +17,6 @@ class Reservation_Testing_Utils{
         const selected_month_sel = await ReservationPage.get_date_month();
         let selected_month = await selected_month_sel.getText();
         selected_month = await selected_month.slice(3);
-        console.log(selected_month,"<========selected_month")
         await ReservationPage.seat_available_btn_sel.click();
         return {selected_date,selected_month}
     }
