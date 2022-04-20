@@ -60,7 +60,7 @@ class CalenderPage{
     }
 
     async timeslot_availability_date(row,col){
-        return await (await $(`//*[@id="root"]/div/div/div[2]/div/div[2]/div/div[2]/div[${row}]/div[2]/div[1]/div[${col}]/a`)).getText();
+        return await $(`//*[@id="root"]/div/div/div[2]/div/div[2]/div/div[2]/div[${row}]/div[2]/div[1]/div[${col}]/a`).getText();
     }
 
     get month_sel(){
@@ -97,6 +97,18 @@ class CalenderPage{
 
     get timeslot_modal_calender_submit_btn(){
         return $('/html/body/div[5]/div/div[1]/div/div/div[2]/div/div[1]/div[2]/div[2]/button[1]');
+    }
+
+    async get_Reservation_name_sel(row){
+        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/h6/div/div[1]`);
+    }
+
+    async get_total_invoice_val(row){
+        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[1]/table/tbody/tr[4]/td[3]`).getText();
+    }
+
+    async get_invoice_data(row,invoiceRow,colIndex){
+        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[1]/table/tbody/tr[${invoiceRow}]/td[${colIndex}]`).getText();
     }
 };
 

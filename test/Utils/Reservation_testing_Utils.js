@@ -9,10 +9,17 @@ class Reservation_Testing_Utils{
         if(tandemPack===5){
             await ReservationPage.next_month_sel.click();
         }
+
         const TandemPackDate = await ReservationPage.date_sel(date);
+        const selected_date = await TandemPackDate.getText();
         await TandemPackDate.click();
         await browser.pause(500);
+        const selected_month_sel = await ReservationPage.get_date_month();
+        let selected_month = await selected_month_sel.getText();
+        selected_month = await selected_month.slice(3);
+        console.log(selected_month,"<========selected_month")
         await ReservationPage.seat_available_btn_sel.click();
+        return {selected_date,selected_month}
     }
 
     async select_num_tickets_pay_option(numTic,payOption){

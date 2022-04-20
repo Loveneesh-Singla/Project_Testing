@@ -19,6 +19,10 @@ class ReservationPage{
        
     }
 
+    async get_date_month(){
+        return $('//*[@id="reservationForm"]/div/div[2]/div[1]/span[2]');
+    }
+
     async date_sel(month_date_index){
         return await $(`//*[@id="reservationForm"]/div/div[1]/div[3]/div[2]/div/div/div/div[2]/button[${month_date_index}]/abbr`)
     }
@@ -101,7 +105,9 @@ class ReservationPage{
        return Transitional_Modal;
     }
 
-
+    async get_invoice_total_val(){
+        return await $('//*[@id="amountTotal"]').getText();
+    }
     async pay_option_radio_btn(type){
         let index;
         if(type==="full") index = 1;
