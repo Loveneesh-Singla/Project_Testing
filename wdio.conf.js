@@ -64,18 +64,25 @@ exports.config = {
 
 
     suites:{
+        SpeacialTimeslots:[
+            './test/specs/Timeslots_Testing/I_Create_Speacial_CalenderEvents.js',
+            './test/specs/Timeslots_Testing/I2_Create_speacial_Timeslots.js',
+            './test/specs/Timeslots_Testing/I2_Check_Speacial_CalenderEvents.js'
+        ],
         Timeslots:[
-            './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
-            // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-            // './test/specs/Timeslots_Testing/C_Check_Created_Timeslots.js',
-            // './test/specs/Timeslots_Testing/D_Check_Blackout.js',
-            // './test/specs/Timeslots_Testing/E_Check_Undo_Blackout.js',
-            // './test/specs/Timeslots_Testing/F_Check_Blackout_Series.js',
-            // './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
-            // './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
+            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
+            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            './test/specs/Timeslots_Testing/A2_Check_Calender_Events.js',
+            './test/specs/Timeslots_Testing/C_Check_Created_Timeslots.js',
+            './test/specs/Timeslots_Testing/D_Check_Blackout.js',
+            './test/specs/Timeslots_Testing/E_Check_Undo_Blackout.js',
+            './test/specs/Timeslots_Testing/F_Check_Blackout_Series.js',
+            './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
+            './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
+
         ],
         Reservations_Prerequisites:[
-            './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
+            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
             './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],

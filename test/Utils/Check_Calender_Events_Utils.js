@@ -4,7 +4,7 @@ import ReservationPage from "../pages/ReservationPage";
 
 class Check_Calender_Events{
 
-    async check_deposit_amount_reservation(i,eventNameEle){
+    async check_deposit_amount_reservation(i,eventNameEle,speacialI){
         const eventDepositAmount = await CalenderEvents_Page.event_deposit_amount(i);
         await ReservationPage.vist_reservation_page();
         await browser.pause(500);
@@ -12,7 +12,7 @@ class Check_Calender_Events{
         expect(eventNameEle).toHaveText(Available_Pack_Sel);
         let Available_Pack_Sel_Btn = await ReservationPage.get_available_pack_sel(i+1);
         await Available_Pack_Sel_Btn.click();
-        if(i === 4){
+        if(i === 4 || speacialI === 2){
             await ReservationPage.next_month_sel.click();
         }
         const dateIndex = 25;
