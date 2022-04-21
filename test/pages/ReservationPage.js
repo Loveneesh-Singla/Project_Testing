@@ -6,6 +6,10 @@ class ReservationPage{
         await browser.url('https://localhost:5004');
     }
 
+    async vist_phone_reservation_page(){
+        await browser.url('https://localhost:5004/phone');
+    }
+
     async get_available_pack_sel(pack_button_index){
         return await $(`//*[@id="reservationForm"]/div/div[1]/div[1]/div[2]/div/div/button[${pack_button_index}]`);
     }
@@ -94,10 +98,13 @@ class ReservationPage{
         return $('//*[@id="modal-report"]/div/div[2]/button');
     }
 
-    async pay_now_btn(payOption){
+    async pay_now_btn(payOption,onPage){
         let index;
         if(payOption==="full") index = 8;
         if(payOption==="deposit") index = 7;
+        if((payOption==="full" || payOption ==="noPay") && onPage === "phone") index = 7;
+        if(payOption==="deposit" && onPage === "phone") index = 6;
+
         return await $(`//*[@id="reservationForm"]/div/div[${index}]/div/div/div/button`);
     }
 
@@ -118,7 +125,10 @@ class ReservationPage{
         if(type==="full") index = 1;
         if(type==="deposit") index = 2;
         if(type==="gift card") index =3 ;
+        if(type==="noPay")
+        return await $('/html/body/div[1]/div/div/div/div[3]/div/div/div[3]/div/div[1]/div[2]/div/input');
         return await $(`/html/body/div[1]/div/div/div/div[3]/div/div/div[3]/div/div[1]/div[2]/input[${index}]`);
+ 
     }
 
     async visit_selectedtimeslot_month(Mani_Month){

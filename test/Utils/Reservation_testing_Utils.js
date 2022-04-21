@@ -98,8 +98,10 @@ class Reservation_Testing_Utils{
         const TandemPack = await ReservationPage.tandem_option_sel(i-64);
         await TandemPack.selectByIndex(tandemPack);
         // await browser.pause(1500);
-        const selectVideo =  await ReservationPage.video_option_sel(i-64);
-        await selectVideo.selectByIndex(videoOption);
+        if(videoOption!==0){
+            const selectVideo =  await ReservationPage.video_option_sel(i-64);
+            await selectVideo.selectByIndex(videoOption);
+        }
         // await browser.pause(1500);
     }
 
@@ -109,11 +111,13 @@ class Reservation_Testing_Utils{
         // await browser.pause(500);
     }
 
-    async pay_makeReservation(payOption){
+    async pay_makeReservation(payOption,onPage){
         let name = await this.get_fName_lname(67);
-        await this.accept_terms_conditions(payOption);
-        const payNowBtn = await ReservationPage.pay_now_btn(payOption);
+        if(onPage!=="phone") await this.accept_terms_conditions(payOption);
+        const payNowBtn = await ReservationPage.pay_now_btn(payOption,onPage);
+        const btnText = await payNowBtn.getText();
         await payNowBtn.click();
+        if(btnText === "Pay Now"){
         const reservationModal = await ReservationPage.Transitional_Modal.transitional_modal;
         await browser.pause(1000);
         const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;
@@ -123,7 +127,7 @@ class Reservation_Testing_Utils{
         }
         await browser.switchToParentFrame();
         await ReservationPage.Transitional_Modal.submit_btn.click();
-        await browser.pause(3000);
+        await browser.pause(3000);}
     }
 
     get_video_option(i,videoOptions){

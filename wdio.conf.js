@@ -20,43 +20,7 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: [
-
-        //  './test/specs/Timeslots_Testing/*.js'
-        // './test/specs/Reservations_Testing/*.js'
-        // './test/specs/Tandem_Packages/*.js'
-
-
-
-        // './test/specs/Timeslots_Testing/A_Create_Check_CalenderEvents.js',
-        // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-        // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
-
-
-        // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
-        // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
-        // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
-        // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
-        // './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
-        // './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
-        // './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
-        // './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
-        // './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
-        // './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
-        // './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
-        // './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
-        // './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
-        // './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
-        // './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
-        // './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
-        // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
-        // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
-        // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js'
-
-
-        // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
-        
-    ],
+    specs: [],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -124,6 +88,14 @@ exports.config = {
             './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
             './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
             './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
+        ],
+        Phone_Reservations:[
+            './test/specs/Phone_Reservations_Testing/A_PH_Reserve_1__T_FP_NT.js',
+            './test/specs/Phone_Reservations_Testing/BW_PH_Reserve_1_T_FP_TA.js',
+            './test/specs/Phone_Reservations_Testing/CW_PH_Reserve_2_T_FP_TA.js',
+            './test/specs/Phone_Reservations_Testing/D_PH_Reserve_2_T_DP_TA.js',
+            './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_DP_TA.js',
+            './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_NoPay_TA.js'
         ]
     },
     //
