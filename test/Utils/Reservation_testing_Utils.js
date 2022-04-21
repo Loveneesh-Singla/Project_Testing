@@ -127,7 +127,7 @@ class Reservation_Testing_Utils{
         }
         await browser.switchToParentFrame();
         await ReservationPage.Transitional_Modal.submit_btn.click();
-        await browser.pause(3000);}
+        await browser.pause(5000);}
     }
 
     get_video_option(i,videoOptions){

@@ -43,7 +43,7 @@ class MongoDB_Data{
 
     async getDataFromDatabase(firstName,lastName){
         const database = await Mongo_DB.createConnection();
-        await browser.pause(2500);
+        await browser.pause(3500);
         const tandemStudent = await database.collection('tandemstudents').findOne({firstname:firstName,lastname:lastName});
         await browser.pause(2500);
         const selectedTandemPack = await database.collection('items').findOne({item:tandemStudent.tandemPackage});
