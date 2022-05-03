@@ -31,6 +31,10 @@ class TransitionalModal{
     get submit_btn(){
         return $('//*[@id="myModal"]/div/button');
     }
+
+    // async submit_btn(i){
+    //     return await  $(`//*[@id="reservationForm"]/div/div[${i}]/div/button`); 
+    // }
 }
 
 export default new TransitionalModal();

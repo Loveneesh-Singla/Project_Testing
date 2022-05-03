@@ -16,7 +16,9 @@ describe("Reserve one ticket with full pay, tandem package & selected video are 
         await Reservation_Testing_Utils.select_tandemP_date(4,DateIndex);
         await Reservation_Testing_Utils.select_num_tickets_pay_option(numOfTickets,"full");
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details(numOfTickets,tandemPackages,videoOptions);
+
         await Reservation_Testing_Utils.pay_makeReservation("full");
+        await browser.pause(1000);
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend)
     })

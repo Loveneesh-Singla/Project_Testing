@@ -5,6 +5,7 @@ import Login_Page from "../pages/Login_Page";
 class Manifest_Reservation_Testing_Utils{
 
     async verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal){
+        console.log(selected_date,selected_month,jumperNames,invoiceTotalVal,"<=========selected_date,selected_month,jumperNames,invoiceTotalVal")
         await Login_Page.doLogin();
         await CalenderPage.vist_calender_page();
         await this.moveToMonth(selected_month);
@@ -18,6 +19,7 @@ class Manifest_Reservation_Testing_Utils{
         let jumperName = jumperNames[0][0]+" "+jumperNames[0][1]
         let obj = await this.goToReservation(name,row,jumperName);
         await obj.nameSel.click();
+        await browser.pause(2000);
         await this.check_invoice_value(obj.row,invoiceTotalVal);
     }
 

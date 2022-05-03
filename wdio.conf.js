@@ -43,7 +43,6 @@ exports.config = {
             './test/specs/Timeslots_Testing/F_Check_Blackout_Series.js',
             './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
             './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
-
         ],
         Reservations_Prerequisites:[
             './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
@@ -96,7 +95,19 @@ exports.config = {
             './test/specs/Phone_Reservations_Testing/D_PH_Reserve_2_T_DP_TA.js',
             './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_DP_TA.js',
             './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_NoPay_TA.js'
+        ],
+        GiftCoupon_Reservation_Testing_Prerequisites:[
+            './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
+        ],
+        GiftCoupon_Reservation_Testing:[
+            './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
+            './test/specs/GiftCoupon_Reservation_Testing/B_BG_2T_NV_Res.js',
+            './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
         ]
+
+
+
+
     },
     //
     // ============
