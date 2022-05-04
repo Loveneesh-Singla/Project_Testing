@@ -25,8 +25,8 @@ class GiftShopUtils{
 
     async fill_user_details(){
         await browser.pause(2000);
-        await GiftShop_Page.enter_email.setValue("l.ksingla2@gmail.com");
-        await GiftShop_Page.set_name.setValue("Loveneesh");
+        await GiftShop_Page.enter_email.setValue("test2@gmail.com");
+        await GiftShop_Page.set_name.setValue("test");
     }
 
     async pay_get_giftcard(){
@@ -51,7 +51,7 @@ class GiftShopUtils{
         await browser.pause(500);
         const database = await Mongo_DB.createConnection();
         await browser.pause(3500);
-        const GiftCard = await database.collection('giftpurchases').findOne({purchaserEmail:"l.ksingla2@gmail.com"});
+        const GiftCard = await database.collection('giftpurchases').findOne({purchaserEmail:"test2@gmail.com"});
         await browser.pause(4500);
         const GiftCoupon = await database.collection('giftcoupons').findOne({_id:GiftCard.giftCouponIds[0]});
         return await GiftCoupon.couponCode;
