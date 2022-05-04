@@ -128,7 +128,7 @@ class ReservationPage{
         if((payOption==="full" || payOption ==="noPay") && onPage === "phone") index = 7;
         if(payOption==="deposit" && onPage === "phone") index = 6;
         if(payOption === "giftcard") index = 9;
-        if(payOption==="full" || isGiftCoupon) index = 8;
+        if((payOption==="full" || isGiftCoupon) && onPage !== "phone") index = 8;
         return await $(`//*[@id="reservationForm"]/div/div[${index}]/div/div/div/button`);
     }
 

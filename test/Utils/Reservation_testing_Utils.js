@@ -30,7 +30,6 @@ class Reservation_Testing_Utils{
         }
         const pay_Option = await ReservationPage.pay_option_radio_btn(payOption,isGiftCoupon);
         await pay_Option.click();
-        console.log(isGiftCoupon,"<================isGiftCoupon")
         await browser.pause(10000);
     }
 

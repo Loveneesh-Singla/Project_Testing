@@ -29,8 +29,16 @@ class TandemPackagesPage{
         return $('//*[@id="modal-main"]/div/div[2]/form/div[11]/div/select');
     }
 
+    get video_option_sel(){
+        return $('//*[@id="modal-main"]/div/div[2]/form/div[5]/div/select');
+    }
+
     get calender_event_sel(){
         return $('//*[@id="modal-main"]/div/div[2]/form/div[12]/div/select');
+    }
+
+    get discount_code_input_sel(){
+        return $('//*[@id="modal-main"]/div/div[2]/form/div[10]/div/input');
     }
 
     get bookable_sel(){
