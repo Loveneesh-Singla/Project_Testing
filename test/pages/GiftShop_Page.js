@@ -3,6 +3,7 @@ import Transitional_Modal from "./Components/Transitional_Modal";
 
 
 class GiftShop{
+    
     async visit_gift_shop_page(){
         await browser.url("https://localhost:5004/giftshop");
         await browser.pause(1500);
@@ -42,7 +43,6 @@ class GiftShop{
 
     get accept_terms_conditions_btn(){
         return $('//*[@id="modal-report"]/div/div[2]/button');
-                
     }
 
     get pay_btn(){
@@ -51,7 +51,7 @@ class GiftShop{
 
     get Transitional_Modal(){
         return Transitional_Modal;
-     }
+    }
 }
 
 export default new GiftShop();

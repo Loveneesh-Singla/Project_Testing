@@ -1,9 +1,8 @@
-import GiftShop_Page from "../../pages/GiftShop_Page"
+import GiftShop_Page from "../../pages/GiftShop_Page";
 import ReservationPage from "../../pages/ReservationPage";
 import GiftShop_Utils from "../../Utils/GiftShop_Utils";
+import MongoDB from "../../Utils/Drop_collections_MongoDB";
 import Reservation_Testing_Utils from "../../Utils/Reservation_testing_Utils";
-import MongoDB from '../../Utils/Drop_collections_MongoDB'
-import MongoDB_Data from '../../Utils/Compare_Data_MongoDb';
 import Manifest_Reservation_Testing_Utils from "../../Utils/Manifest_Reservation_Testing_Utils";
 
 describe("Buy a gift card num of tickets in giftcard are 1 and no video",()=>{
@@ -21,10 +20,10 @@ describe("Buy a gift card num of tickets in giftcard are 1 and no video",()=>{
         const Gift_Coupon = await GiftShop_Utils.get_gift_card_code();
 
         //make reservation using gift coupon =================>>>>>>>>
-        await ReservationPage.visit_giftcard_reservation_page(Gift_Coupon);
         const DateIndex = 18;
         const isGiftCouponlink = true;
         const isGiftCoupon = true;
+        await ReservationPage.visit_giftcard_reservation_page(Gift_Coupon);
         const {selected_date,selected_month} = await Reservation_Testing_Utils.select_tandemP_date(4,DateIndex,isGiftCouponlink);
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details(numOfTickets,tandemPackages,videoOptions,isGiftCouponlink,isGiftCoupon);
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();

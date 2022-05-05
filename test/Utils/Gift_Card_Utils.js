@@ -7,13 +7,13 @@ class GiftCardUtils{
 
     async create_giftcards(){
         const database = await Mongo_DB.createConnection();
-        await database.collection('items').deleteMany({"category":"giftcard"})
+        await database.collection('items').deleteMany({"category":"giftcard"});
         for(let i = 1; i <= 3; i++){
             await GiftCard_Page.create_giftCard_btn.click();
             await GiftCard_Page.gift_card_name_input.setValue(`Test${i}`);
             await GiftCard_Page.gift_card_price_input.setValue(200*i);
             await GiftCard_Page.gift_card_Taxble_amount_input.setValue(200*i);
-            const numTickets = i === 2 ? 2 :1;
+            const numTickets = i === 2 ? 2 : 1;
             await GiftCard_Page.gift_card_num_tickets_input.setValue(numTickets);
             await browser.pause(2000);
             await GiftCard_Page.gift_card_select_tandem_pack.selectByVisibleText(`Tandem_3_TA`);
@@ -24,6 +24,7 @@ class GiftCardUtils{
             await browser.pause(1000);
         }
     }
+
 }
 
 

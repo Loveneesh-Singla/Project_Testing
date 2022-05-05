@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 class GiftCard{
 
     async vist_gift_cards_page(){

@@ -14,7 +14,7 @@ describe("Buy a gift card num of tickets in giftcard are 1 and have video",()=>{
         const giftCard = "Test3";
         const isGiftCouponlink = false;
         const isGiftCoupon = true;
-        const onPage = "regular"
+        const onPage = "regular";
         await MongoDB.drop_collection("giftpurchases");
         await GiftShop_Page.visit_gift_shop_page();
         await GiftShop_Utils.add_giftcard_2_cart_checkout(giftCard);
@@ -23,8 +23,8 @@ describe("Buy a gift card num of tickets in giftcard are 1 and have video",()=>{
         const Gift_Coupon = await GiftShop_Utils.get_gift_card_code();
 
         //make reservation using gift coupon =================>>>>>>>>
-        await ReservationPage.vist_reservation_page();
         const DateIndex = 18;
+        await ReservationPage.vist_reservation_page();
         const {selected_date,selected_month} = await Reservation_Testing_Utils.select_tandemP_date(4,DateIndex,isGiftCouponlink);
         await Reservation_Testing_Utils.select_num_tickets_pay_option(numOfTickets,payOption,isGiftCouponlink,isGiftCoupon);
         await Reservation_Testing_Utils.apply_gift_coupon(Gift_Coupon);
