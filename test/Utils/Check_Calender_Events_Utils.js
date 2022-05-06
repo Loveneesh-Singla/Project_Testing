@@ -18,7 +18,8 @@ class Check_Calender_Events{
         const dateIndex = 25;
         let Date_Btn_Sel = await ReservationPage.date_btn_sel(dateIndex);
         await Date_Btn_Sel.click();
-        await ReservationPage.seat_available_btn_sel.click();
+        const seatsAvailableBtn = await ReservationPage.seat_available_btn_sel();
+        await seatsAvailableBtn.click();
         let content = await ReservationPage.get_deposit_amount_span();
         await expect((content.split(" ")[5]).slice(1)).toEqual(eventDepositAmount);
         await browser.pause(3000);
