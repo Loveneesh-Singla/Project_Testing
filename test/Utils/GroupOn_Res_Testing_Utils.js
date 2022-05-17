@@ -8,16 +8,22 @@ class GroupResTestingUtils {
         while(true){
             await GroupOn_Res_Page.groupOnCodeInput.setValue(codes[i])
             const isValid =  await GroupOn_Res_Page.groupon_pack_header.isExisting();
-            if( isValid || i > 200 ) break;
+            if( isValid || i > 200 ) {
+                if(i < 200) return codes[i];
+                break;
+            };
             i++;
         }
     }
 
     async select_GroupOnP_date(date){
-        const GroupOnPackDate = await GroupOn_Res_Page.date_sel(date)
+        const GroupOnPackDate = await GroupOn_Res_Page.date_sel(date);
+        const selected_date = await GroupOnPackDate.getText();
+        const selected_month = await GroupOn_Res_Page.selected_month.getText();
         await GroupOnPackDate.click();
         await browser.pause(500);
         await GroupOn_Res_Page.seat_available_btn_sel.click();
+        return {selected_date,selected_month}
     }
 
     async fill_passenger_details(numPassengers,selectVideo,videoOptions){

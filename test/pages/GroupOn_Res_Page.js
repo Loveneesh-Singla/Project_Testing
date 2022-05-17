@@ -11,12 +11,16 @@ class GroupOnReservationPage {
         return $('//*[@id="reservationForm"]/div/div[1]/div[2]/div/div/input');
     }
 
+    get selected_month(){
+        return $('//*[@id="reservationForm"]/div/div[2]/div[3]/div[1]/button[3]')
+    }
+
     get groupon_pack_header(){
         return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div/div');
     }
 
     async date_sel(index){
-        return $(`//*[@id="reservationForm"]/div/div[2]/div[3]/div[2]/div/div/div/div[2]/button[${index}]`)
+        return await $(`//*[@id="reservationForm"]/div/div[2]/div[3]/div[2]/div/div/div/div[2]/button[${index}]/abbr`)
     }
 
     get seat_available_btn_sel(){

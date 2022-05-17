@@ -144,7 +144,7 @@ class Reservation_Testing_Utils{
             // await submitBtn.click();
             await ReservationPage.Transitional_Modal.submit_btn.click();
         }
-        await browser.pause(2000);
+        await browser.pause(5000);
     }
 
     get_video_option(i,videoOptions){
