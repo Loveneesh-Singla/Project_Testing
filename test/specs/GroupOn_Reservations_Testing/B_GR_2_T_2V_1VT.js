@@ -22,11 +22,12 @@ describe("Reserve 2 GroupOn Ticket with 2 Videos",()=>{
         const {selected_date,selected_month} = await GroupResTestingUtils.select_GroupOnP_date(DateIndex);
         await browser.pause(500);
         const jumperNames = await GroupOn_Res_Testing_Utils.fill_passenger_details(numOfTickets,selectVideo,videoOptions);
+        const invoiceTotalVal = await GroupOnReservationPage.get_invoice_total_val();
         await browser.pause(1000);
         await GroupOn_Res_Testing_Utils.pay_makeReservation();
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend);
-        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,0,grouponCode);
+        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal,grouponCode);
         await GroupOnReservationPage.vist_groupon_reservation_page();
         await browser.pause(1000);
         await GroupOn_Res_Testing_Utils.verifyGrouponCodeInvalid(grouponCode);

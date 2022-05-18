@@ -21,7 +21,7 @@ class Check_Calender_Events{
         const seatsAvailableBtn = await ReservationPage.seat_available_btn_sel();
         await seatsAvailableBtn.click();
         let content = await ReservationPage.get_deposit_amount_span();
-        await expect((content.split(" ")[5]).slice(1)).toEqual(eventDepositAmount);
+        await expect((content.split(" ")[4]).slice(1)).toEqual(eventDepositAmount);
         await browser.pause(3000);
     }
 

@@ -111,7 +111,7 @@ class CalenderPage{
         return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[1]/table/tbody/tr[${invoiceRow}]/td[${colIndex}]`).getText();
     }
 
-    async get_groupon_code(row){
+    async get_code(row){
         return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[7]`)
     }
 };

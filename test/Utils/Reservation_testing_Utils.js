@@ -187,7 +187,10 @@ class Reservation_Testing_Utils{
         else return 1;
     }
 
-
+    async verifyGiftCoupon(){
+        const errorMessage = await ReservationPage.error_message_sel.getText();
+        await expect(errorMessage).toEqual("Invalid Giftcard Code !!");
+    }
 }
 
 

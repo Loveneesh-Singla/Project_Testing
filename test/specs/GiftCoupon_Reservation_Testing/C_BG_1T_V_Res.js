@@ -31,6 +31,8 @@ describe("Buy a gift card num of tickets in giftcard are 1 and have video",()=>{
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details(numOfTickets,tandemPackages,videoOptions,isGiftCouponlink,isGiftCoupon);
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();
         await Reservation_Testing_Utils.pay_makeReservation(payOption,onPage,isGiftCoupon);
-        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal);
+        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal," "+Gift_Coupon);
+        await ReservationPage.visit_giftcard_reservation_page(Gift_Coupon);
+        await Reservation_Testing_Utils.verifyGiftCoupon();
     })
 })

@@ -169,6 +169,10 @@ class ReservationPage{
             monthSch = await this.month_sel.getText();
         }
     }
+
+    get error_message_sel(){
+        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
+    }
 }
 
 

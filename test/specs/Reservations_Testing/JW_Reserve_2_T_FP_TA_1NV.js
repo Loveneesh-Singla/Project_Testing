@@ -22,7 +22,6 @@ describe("Reserve two tickets with full pay, tandem package & selected video are
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend,payOption);
     })
-
 })
 
 

@@ -73,6 +73,10 @@ class GroupOnReservationPage {
         return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
     }
 
+    async get_invoice_total_val(){
+        return await $('//*[@id="amountTotal"]').getText();
+    }
+
     async video_option_sel(i){
         let num = i === 1 ? 6 : 4 ;
         return $(`//*[@id="reservationForm"]/div/div[5]/div/div/div[${i}]/div/div/div/div[${num}]/div[2]/select`);

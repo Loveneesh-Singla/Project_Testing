@@ -4,7 +4,7 @@ import Login_Page from "../pages/Login_Page";
 
 class Manifest_Reservation_Testing_Utils{
 
-    async verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal,grouponCode){
+    async verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal,coupon){
         await Login_Page.doLogin();
         await CalenderPage.vist_calender_page();
         await this.moveToMonth(selected_month);
@@ -19,11 +19,11 @@ class Manifest_Reservation_Testing_Utils{
         let obj = await this.goToReservation(name,row,jumperName);
         await obj.nameSel.click();
         await browser.pause(2000);
-        if(!grouponCode) await this.check_invoice_value(obj.row,invoiceTotalVal);
-        else {
-            const grouoOnCode_sel = await CalenderPage.get_groupon_code(obj.row);
-            const group_on_code = await grouoOnCode_sel.getText();
-            await expect(grouponCode).toEqual(group_on_code.slice(14));
+        await this.check_invoice_value(obj.row,invoiceTotalVal);
+        if(coupon){
+            const coupon_sel = await CalenderPage.get_code(obj.row);
+            const code = await coupon_sel.getText();
+            await expect(coupon).toEqual(code.slice(14));
         }
     }
 
