@@ -132,6 +132,12 @@ class GroupResTestingUtils {
             else return 0;}
         else return 0;
     }
+
+    async verifyGrouponCodeInvalid(grouponCode){
+        await GroupOn_Res_Page.groupOnCodeInput.setValue(grouponCode);
+        const errorMessage = await GroupOn_Res_Page.invalid_groupon_code_error_div.getText();
+        await expect("Invalid Code !!").toEqual(errorMessage);
+    }
 }
 
 

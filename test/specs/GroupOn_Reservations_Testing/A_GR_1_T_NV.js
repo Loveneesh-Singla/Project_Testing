@@ -25,6 +25,9 @@ describe("Reserve 1 GroupOn Ticket without Video",()=>{
         await GroupOn_Res_Testing_Utils.pay_makeReservation();
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend);
-        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,0,grouponCode)
+        await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,0,grouponCode);
+        await GroupOnReservationPage.vist_groupon_reservation_page();
+        await browser.pause(1000);
+        await GroupOn_Res_Testing_Utils.verifyGrouponCodeInvalid(grouponCode);
     })
 })

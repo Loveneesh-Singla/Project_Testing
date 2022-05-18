@@ -112,7 +112,7 @@ class CalenderPage{
     }
 
     async get_groupon_code(row){
-        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div[2]/li[7]`)
+        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[7]`)
     }
 };
 

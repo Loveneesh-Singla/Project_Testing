@@ -69,6 +69,10 @@ class GroupOnReservationPage {
         return Transitional_Modal;
     }
 
+    get invalid_groupon_code_error_div(){
+        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
+    }
+
     async video_option_sel(i){
         let num = i === 1 ? 6 : 4 ;
         return $(`//*[@id="reservationForm"]/div/div[5]/div/div/div[${i}]/div/div/div/div[${num}]/div[2]/select`);
