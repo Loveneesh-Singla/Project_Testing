@@ -91,7 +91,7 @@ class GroupResTestingUtils {
         const payNow = await GroupOn_Res_Page.payNow();
         const btnText = await payNow.getText();
         await payNow.click();
-        if(btnText === "Pay Now"){
+        if(btnText === "Pay Now" || btnText === "Pay with Credit Card"){
         const GroupOnResModal = await GroupOn_Res_Page.Transitional_Modal.transitional_modal;
         await browser.pause(1000);
         const Tansitional_iframe = await GroupOn_Res_Page.Transitional_Modal.transnational_modal_iframe;
@@ -101,7 +101,8 @@ class GroupResTestingUtils {
         }
         await browser.switchToParentFrame();
         await GroupOn_Res_Page.Transitional_Modal.submit_btn.click();
-        await browser.pause(3000);}
+        }
+        await browser.pause(3000);
     }
 
 

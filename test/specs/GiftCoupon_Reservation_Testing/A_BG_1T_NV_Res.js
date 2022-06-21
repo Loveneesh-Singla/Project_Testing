@@ -19,7 +19,7 @@ describe("Buy a gift card num of tickets in giftcard are 1 and no video",()=>{
         await GiftShop_Utils.pay_get_giftcard();
         const Gift_Coupon = await GiftShop_Utils.get_gift_card_code();
 
-        //make reservation using gift coupon =================>>>>>>>>
+        // make reservation using gift coupon =================>>>>>>>>
         const DateIndex = 18;
         const isGiftCouponlink = true;
         const isGiftCoupon = true;

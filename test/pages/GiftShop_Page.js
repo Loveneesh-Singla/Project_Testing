@@ -22,7 +22,7 @@ class GiftShop{
     }
 
     get proceed_to_checkout_btn(){
-        return $('//*[@id="root"]/div/div/div/div[3]/div/div[5]/button');
+        return $('//*[@id="root"]/div/div/div/div[3]/div/div[6]/button');
     }
 
     get checkout_btn(){

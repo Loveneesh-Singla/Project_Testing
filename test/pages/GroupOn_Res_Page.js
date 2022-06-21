@@ -8,7 +8,7 @@ class GroupOnReservationPage {
     }
 
     get groupOnCodeInput(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[2]/div/div/input');
+        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div/input');
     }
 
     get selected_month(){
@@ -16,7 +16,7 @@ class GroupOnReservationPage {
     }
 
     get groupon_pack_header(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div/div');
+        return $('//*[@id="reservationForm"]/div/div[1]/div[4]/div/div/div');
     }
 
     async date_sel(index){
@@ -70,7 +70,7 @@ class GroupOnReservationPage {
     }
 
     get invalid_groupon_code_error_div(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
+        return $('//*[@id="reservationForm"]/div/div[1]/div[4]/div/div');
     }
 
     async get_invoice_total_val(){

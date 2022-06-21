@@ -118,6 +118,7 @@ class Reservation_Testing_Utils{
     async set_email_phone(name,nums,isGiftCouponlink){
         const setEmail =  await ReservationPage.email_input_sel(isGiftCouponlink);
         await setEmail.setValue(`${name[0]}_${name[1]}${nums[1],nums[3]}@gmail.com`)
+        // await setEmail.setValue(`loveneesh.zestgeek@gmail.com`)
         const setPhone = await ReservationPage.phoneNo_input_sel(isGiftCouponlink)
         await setPhone.setValue(`646648${nums[0]}${nums[1]}`)
         // await browser.pause(500);
@@ -129,7 +130,7 @@ class Reservation_Testing_Utils{
         const payNowBtn = await ReservationPage.pay_now_btn(payOption,onPage,isGiftCoupon);
         const btnText = await payNowBtn.getText();
         await payNowBtn.click();
-        if(btnText === "Pay Now"){
+        if(btnText === "Pay with Credit Card" || btnText === "Pay Now"){
             const reservationModal = await ReservationPage.Transitional_Modal.transitional_modal;
             await browser.pause(1000);
             const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;

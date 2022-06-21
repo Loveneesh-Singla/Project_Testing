@@ -6,7 +6,7 @@ class GiftShopUtils{
 
     async add_giftcard_2_cart_checkout(giftCard){
         await browser.pause(1000);
-        let i = 2;
+        let i = 3;
         let gift_card_name_sel = await GiftShop_Page.get_gift_card_name(i);
         let gift_card_name = await gift_card_name_sel.getText();
         while(gift_card_name !== giftCard){
@@ -26,6 +26,7 @@ class GiftShopUtils{
     async fill_user_details(){
         await browser.pause(2000);
         await GiftShop_Page.enter_email.setValue("test2@gmail.com");
+        // await GiftShop_Page.enter_email.setValue("loveneesh.zestgeek@gmail.com");
         await GiftShop_Page.set_name.setValue("test");
     }
 

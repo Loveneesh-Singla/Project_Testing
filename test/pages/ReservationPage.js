@@ -17,8 +17,12 @@ class ReservationPage{
 
     async get_available_pack_sel(pack_button_index,isGiftCoupon){
         let index = 1;
-        if(isGiftCoupon) index = 2;
-        return await $(`//*[@id="reservationForm"]/div/div[${index}]/div[1]/div[2]/div/div/button[${pack_button_index}]`);
+        let index_2 =2;
+        if(isGiftCoupon) {
+            index = 2;
+            index_2=1
+        }
+        return await $(`//*[@id="reservationForm"]/div/div[${index}]/div[${index_2}]/div[2]/div/div/button[${pack_button_index}]`);
     }
 
     get month_sel(){
@@ -26,8 +30,7 @@ class ReservationPage{
     }
 
     get next_month_sel(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div[1]/button[4]');
-       
+        return $('//*[@id="reservationForm"]/div/div[1]/div[4]/div[1]/button[4]');
     }
 
     async get_date_month(isGiftCoupon){
@@ -38,8 +41,12 @@ class ReservationPage{
 
     async date_sel(month_date_index,isGiftCoupon){
         let index = 1;
-        if(isGiftCoupon) index = 2;
-        return await $(`//*[@id="reservationForm"]/div/div[${index}]/div[3]/div[2]/div/div/div/div[2]/button[${month_date_index}]/abbr`)
+        let index_2 = 4;
+        if(isGiftCoupon) {
+            index = 2;
+            index_2 = 3;
+        }
+        return await $(`//*[@id="reservationForm"]/div/div[${index}]/div[${index_2}]/div[2]/div/div/div/div[2]/button[${month_date_index}]/abbr`)
     }
                        
     async date_btn_sel(month_date_index){
@@ -83,6 +90,7 @@ class ReservationPage{
     async phoneNo_input_sel(isGiftCouponlink){
         let index = 4;
         if(isGiftCouponlink) index = 5;
+    
         return await $(`//*[@id="reservationForm"]/div/div[${index}]/div/div/div/div/div/div/div[4]/input`);
     }
 
@@ -171,7 +179,7 @@ class ReservationPage{
     }
 
     get error_message_sel(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
+        return $('//*[@id="reservationForm"]/div/div[1]/div[4]/div/div');
     }
 }
 

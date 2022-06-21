@@ -22,7 +22,7 @@ describe("Reserve one ticket with full pay on phone link, tandem package not tax
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();
         await Reservation_Testing_Utils.pay_makeReservation("full",onPage);
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
-        await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend)
+        // await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend)
         await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal);
     })
 })
