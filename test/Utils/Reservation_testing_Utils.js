@@ -3,13 +3,18 @@ import ReservationPage from "../pages/ReservationPage";
 class Reservation_Testing_Utils{
 
 
-    async select_tandemP_date(tandemPack,date,isGiftCouponlink){
+    async select_tandemP_date(tandemPack,date,isGiftCouponlink,Aff){
         const TandemPackBtn = await ReservationPage.get_available_pack_sel(tandemPack,isGiftCouponlink);
         await TandemPackBtn.click();
         if(tandemPack===5){
             await ReservationPage.next_month_sel.click();
         }
 
+        if(tandemPack===7){
+            await ReservationPage.next_month_sel.click();
+            await ReservationPage.next_month_sel.click();
+            await ReservationPage.next_month_sel.click();
+        }
         const TandemPackDate = await ReservationPage.date_sel(date,isGiftCouponlink);
         const selected_date = await TandemPackDate.getText();
         await TandemPackDate.click();
@@ -18,7 +23,9 @@ class Reservation_Testing_Utils{
         let selected_month = await selected_month_sel.getText();
         selected_month = await selected_month.slice(3);
         const seat_available = await ReservationPage.seat_available_btn_sel(isGiftCouponlink)
+        const seats = seat_available.getText();
         await seat_available.click();
+        if(Aff ===  "aff") return {selected_date,selected_month,seats}
         return {selected_date,selected_month}
     }
 
@@ -57,6 +64,22 @@ class Reservation_Testing_Utils{
             const tandemPack = await this.get_tandem_pack(i-64,tandemPackages)
             const videoOption = await this.get_video_option(i-64,videoOptions);
             await this.select_tandemP_videoO(i,tandemPack,videoOption)
+        }
+        return jumperNames;
+    }
+
+    async fill_passenger_details_aff_res(numPassengers){
+        let jumperNames = [];
+        for(let i=65;i<numPassengers+65;i++){
+            let nums = await this.get_randomNum(i);
+            let name = await this.get_fName_lname(i);
+            await jumperNames.push(name);
+            await this.set_fname_lname(i,name);
+            if(i===65){
+               await this.set_email_phone(name,nums);
+            }
+            const age_checkbox = await ReservationPage.above_18_checkbox(i-64);
+            await age_checkbox.click();
         }
         return jumperNames;
     }

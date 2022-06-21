@@ -170,7 +170,12 @@ exports.config = {
             './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
             './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
             './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js'
+        ],
+        Aff_Reservation_Movement:[
+            './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js'
         ]
+
+
 
 
     },

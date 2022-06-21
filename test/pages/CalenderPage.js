@@ -114,6 +114,26 @@ class CalenderPage{
     async get_code(row){
         return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div/li[7]`)
     }
+
+    async get_reservation_move_btn(row){
+        return await $(`/html/body/div[5]/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[${row}]/div/ul/div[2]/li[1]/span[2]/i`)
+    }
+
+    get change_res_next_month_btn(){
+        return $('//*[@id="modal-main"]/div/div[2]/div[2]/div[1]/div/div/div[1]/button[4]');
+    }
+
+    async change_res_month_date(dateIndex){
+        return await $(`//*[@id="modal-main"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div/div/div/div[2]/button[${dateIndex}]`)
+    }
+
+    get change_res_seats_sel(){
+        return $('//*[@id="modal-main"]/div/div[2]/div[2]/div[2]/div/div/div[3]/div/div/button');
+    }
+
+    get change_res_submit_btn(){
+        return $('//*[@id="modal-main"]/div/div[2]/div[2]/div[3]/div[2]/button[1]');
+    }
 };
 
 
