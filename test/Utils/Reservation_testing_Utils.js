@@ -45,15 +45,19 @@ class Reservation_Testing_Utils{
         await ReservationPage.apply_coupon_btn();
     }
 
-    async fill_passenger_details(numPassengers,tandemPackages,videoOptions,isGiftCouponlink,isGiftCoupon){
+    async fill_passenger_details(numPassengers,tandemPackages,videoOptions,isGiftCouponlink,isGiftCoupon,moveRes){
         let jumperNames = [];
+        let phoneNo;
+        let nums;
         for(let i=65;i<numPassengers+65;i++){
-            let nums = await this.get_randomNum(i);
+            nums = await this.get_randomNum(i);
             let name = await this.get_fName_lname(i);
             await jumperNames.push(name);
             await this.set_fname_lname(i,name,isGiftCouponlink);
-            if(i===65){
+            if(i===65 && moveRes){
                await this.set_email_phone(name,nums,isGiftCouponlink);
+            }else if(i===65 ){
+                phoneNo = await this.set_email_phone(name,nums,isGiftCouponlink);
             }
             const age_checkbox = await ReservationPage.above_18_checkbox(i-64,isGiftCouponlink);
             await age_checkbox.click();
@@ -65,13 +69,16 @@ class Reservation_Testing_Utils{
             const videoOption = await this.get_video_option(i-64,videoOptions);
             await this.select_tandemP_videoO(i,tandemPack,videoOption)
         }
+        
+        if(moveRes) return [ jumperNames,`646648${nums[0]}${nums[1]}`]
         return jumperNames;
     }
 
-    async fill_passenger_details_aff_res(numPassengers){
+    async fill_passenger_details_aff_res(numPassengers,moveRes){
         let jumperNames = [];
+        let nums;
         for(let i=65;i<numPassengers+65;i++){
-            let nums = await this.get_randomNum(i);
+            nums = await this.get_randomNum(i);
             let name = await this.get_fName_lname(i);
             await jumperNames.push(name);
             await this.set_fname_lname(i,name);
@@ -81,6 +88,7 @@ class Reservation_Testing_Utils{
             const age_checkbox = await ReservationPage.above_18_checkbox(i-64);
             await age_checkbox.click();
         }
+        if(moveRes) return [ jumperNames,`646648${nums[0]}${nums[1]}`]
         return jumperNames;
     }
 
@@ -140,8 +148,8 @@ class Reservation_Testing_Utils{
 
     async set_email_phone(name,nums,isGiftCouponlink){
         const setEmail =  await ReservationPage.email_input_sel(isGiftCouponlink);
-        await setEmail.setValue(`${name[0]}_${name[1]}${nums[1],nums[3]}@gmail.com`)
-        // await setEmail.setValue(`loveneesh.zestgeek@gmail.com`)
+        // await setEmail.setValue(`${name[0]}_${name[1]}${nums[1],nums[3]}@gmail.com`)
+        await setEmail.setValue(`loveneesh.zestgeek@gmail.com`)
         const setPhone = await ReservationPage.phoneNo_input_sel(isGiftCouponlink)
         await setPhone.setValue(`646648${nums[0]}${nums[1]}`)
         // await browser.pause(500);
@@ -155,7 +163,7 @@ class Reservation_Testing_Utils{
         await payNowBtn.click();
         if(btnText === "Pay with Credit Card" || btnText === "Pay Now"){
             const reservationModal = await ReservationPage.Transitional_Modal.transitional_modal;
-            await browser.pause(1000);
+            await browser.pause(2000);
             const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;
             await browser.switchToFrame(Tansitional_iframe); 
             if(reservationModal){

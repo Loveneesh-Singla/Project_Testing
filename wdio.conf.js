@@ -108,42 +108,42 @@ exports.config = {
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
-            // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
-            // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
-            // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
-            // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
-            // './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
-            // './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
-            // './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
-            // './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
-            // './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
-            // './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
-            // './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
-            // './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
-            // './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
-            // './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
-            // './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
-            // './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
-            // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
-            // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
-            // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
+            './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+            './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
+            './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
+            './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
+            './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
+            './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
+            './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
+            './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
+            './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
+            './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
+            './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
+            './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
+            './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
+            './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
+            './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
+            './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
+            './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
+            './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
+            './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
       
-            // './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
-            // './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
-            // './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js'
+            './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
+            './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
+            './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
 
 
-            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         GroupOn_Res_Prerequisites:[
             './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
             './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
         ],
         GroupOn_Reservations:[
-            // './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
-            // './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
-            // './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
-            // './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
+            './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
+            './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
+            './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
+            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
             './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
         ],
         Phone_Reservations:[
@@ -171,11 +171,11 @@ exports.config = {
             './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
             './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js'
         ],
-        Aff_Reservation_Movement:[
-            './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js'
+        Reservation_Movement:[
+            // './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
+            // './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js'
+            './test/specs/Reservation_Movement_Testing/C_ChangeReservation__Aff_Link.js'
         ]
-
-
 
 
     },

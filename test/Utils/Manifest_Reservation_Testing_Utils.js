@@ -4,8 +4,8 @@ import Login_Page from "../pages/Login_Page";
 
 class Manifest_Reservation_Testing_Utils{
 
-    async verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal,coupon){
-        await Login_Page.doLogin();
+    async verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal,coupon,again){
+        if(!again) await Login_Page.doLogin();
         await CalenderPage.vist_calender_page();
         await this.moveToMonth(selected_month);
         let {row,col} = await this.moveToDate(selected_date)
