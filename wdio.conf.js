@@ -173,7 +173,7 @@ exports.config = {
         ],
         Reservation_Movement:[
             // './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
-            // './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js'
+            './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js',
             './test/specs/Reservation_Movement_Testing/C_ChangeReservation__Aff_Link.js'
         ]
 
