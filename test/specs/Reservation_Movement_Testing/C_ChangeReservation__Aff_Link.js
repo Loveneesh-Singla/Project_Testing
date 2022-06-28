@@ -17,7 +17,6 @@ describe("create aff reservation, change reservation from email link and verify 
 
         var {selected_date,selected_month,seats} = await Reservation_Testing_Utils.select_tandemP_date(7,DateIndex,"","aff");
         await Reservation_Testing_Utils.select_num_tickets_pay_option(numOfTickets,"full");
-     
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details_aff_res(numOfTickets,true);
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();
         await Reservation_Testing_Utils.pay_makeReservation("full");
