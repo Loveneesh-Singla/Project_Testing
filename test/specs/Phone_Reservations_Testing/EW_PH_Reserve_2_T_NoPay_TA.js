@@ -20,6 +20,7 @@ describe("Reserve two tickets with No pay, tandem package is taxble",()=>{
         await Reservation_Testing_Utils.select_num_tickets_pay_option(numOfTickets,payOption)
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details(fillDetailsFor,tandemPackages,videoOptions);
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();
+        await browser.pause(2500);
         await Reservation_Testing_Utils.pay_makeReservation(payOption,onPage);
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend,payOption);

@@ -12,7 +12,7 @@ describe("Reserve 1 GroupOn Ticket without Video",()=>{
         const selectVideo = false
         const videoOptions = ["TA"];
         await GroupOnReservationPage.vist_groupon_reservation_page();
-        await browser.pause(500);
+        await browser.pause(2500);
         const codes = await JumpsCodes.get_1_codes()
         const grouponCode = await GroupResTestingUtils.set_groupOn_code(codes);
         // Date index is the index of date in calender index starts from 1 

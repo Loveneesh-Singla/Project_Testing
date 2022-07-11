@@ -96,6 +96,7 @@ class GroupResTestingUtils {
         await browser.pause(1000);
         const Tansitional_iframe = await GroupOn_Res_Page.Transitional_Modal.transnational_modal_iframe;
         await browser.switchToFrame(Tansitional_iframe); 
+        await browser.pause(1000);
         if(GroupOnResModal){
            await this.fill_transnational_payment_details(name[0],name[1]);
         }

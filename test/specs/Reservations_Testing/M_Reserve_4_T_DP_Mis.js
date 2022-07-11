@@ -19,6 +19,7 @@ describe("Reserve four tickets with deposit pay",()=>{
         const jumperNames = await Reservation_Testing_Utils.fill_passenger_details(numOfTickets,tandemPackages,videoOptions);
         await Reservation_Testing_Utils.pay_makeReservation(payOption);
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
+        await browser.pause(1500);
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend,payOption);
     })
 

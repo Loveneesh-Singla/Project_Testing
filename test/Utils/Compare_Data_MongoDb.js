@@ -13,6 +13,7 @@ class MongoDB_Data{
             let lastName = jumperNames[i][1].charAt(0)+jumperNames[i][1].slice(1,jumperNames[i][1].length).toLowerCase();
         
             const {tandemStudent,selectedTandemPack,selectedCalenderEvent,database} = await this.getDataFromDatabase(firstName,lastName);
+            await browser.pause(1000);
             const deositAmount = await selectedCalenderEvent.depositAmount ? selectedCalenderEvent.depositAmount : 25
             let selectedVideo = await database.collection('items').findOne({item:tandemStudent.video});
             const selectedVideoPrice = tandemStudent.video!=="none" ? selectedVideo.videoPrice : 0;
@@ -30,13 +31,14 @@ class MongoDB_Data{
                 Total_Tax_Paid =0 ;
                 selectedVideoTax = undefined
             }
+            let taxPaid = tandemStudent.totalTaxPaid.toString().split(".")[0];
             await expect(tandemStudent.firstname).toEqual(firstName);
             await expect(tandemStudent.lastname).toEqual(lastName);
             await expect(tandemStudent.totalPaid).toEqual(totalPaid);
-            await expect(tandemStudent.totalTaxPaid).toEqual(Total_Tax_Paid);
+            await expect((taxPaid)).toEqual(Total_Tax_Paid+"");
             await expect(tandemStudent.totalTandemPaid).toEqual(SelectedTandemPackPrice);
             await expect(tandemStudent.totalVideoPaid).toEqual(selectedVideoPrice);
-            await expect(tandemStudent.totalTandemTaxPaid).toEqual(SelectedTandemPackTax);
+            await expect((tandemStudent?.totalTandemTaxPaid?.toString()?.split(".")[0])+"").toEqual(SelectedTandemPackTax+"");
             await expect(tandemStudent.totalVideoTaxPaid).toEqual(selectedVideoTax);
         }
     }

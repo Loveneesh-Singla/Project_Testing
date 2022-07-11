@@ -179,7 +179,7 @@ class ReservationPage{
     }
 
     get error_message_sel(){
-        return $('//*[@id="reservationForm"]/div/div[1]/div[4]/div/div');
+        return $('//*[@id="reservationForm"]/div/div[1]/div[3]/div/div');
     }
 }
 

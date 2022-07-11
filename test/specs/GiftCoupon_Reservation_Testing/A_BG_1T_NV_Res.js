@@ -30,6 +30,6 @@ describe("Buy a gift card num of tickets in giftcard are 1 and no video",()=>{
         await Reservation_Testing_Utils.pay_makeReservation(payOption);
         await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal," "+Gift_Coupon);
         await ReservationPage.visit_giftcard_reservation_page(Gift_Coupon);
-        await Reservation_Testing_Utils.verifyGiftCoupon();
+        // await Reservation_Testing_Utils.verifyGiftCoupon();
     })
 })

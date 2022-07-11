@@ -24,6 +24,7 @@ describe("Reserve three tickets first full pay then deposit & tandem package is 
         await Reservation_Testing_Utils.select_num_tickets_pay_option(numOfTickets,payOption)
         await browser.pause(2500);
         const invoiceTotalVal = await ReservationPage.get_invoice_total_val();
+        await browser.pause(1500);
         await Reservation_Testing_Utils.pay_makeReservation(payOption);
         const isweekend = (DateIndex%7===6 || DateIndex%7===0 )? true :false;
         await MongoDB_Data.check_data_for_reservations(jumperNames,isweekend,payOption);

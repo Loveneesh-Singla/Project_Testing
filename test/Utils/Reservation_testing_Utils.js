@@ -163,7 +163,7 @@ class Reservation_Testing_Utils{
         await payNowBtn.click();
         if(btnText === "Pay with Credit Card" || btnText === "Pay Now"){
             const reservationModal = await ReservationPage.Transitional_Modal.transitional_modal;
-            await browser.pause(2000);
+            await browser.pause(3000);
             const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;
             await browser.switchToFrame(Tansitional_iframe); 
             if(reservationModal){

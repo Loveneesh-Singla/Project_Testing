@@ -133,7 +133,7 @@ exports.config = {
             './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
 
 
-            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         GroupOn_Res_Prerequisites:[
             './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
