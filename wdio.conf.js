@@ -103,8 +103,8 @@ exports.config = {
             './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
         ],
         Reservations_Prerequisites:[
-            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
-            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            // './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
+            // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
             './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
@@ -126,11 +126,11 @@ exports.config = {
             './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
             './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
             './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
-            './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
+            // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
       
-            './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
-            './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
-            './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
+            // './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
+            // './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
+            // './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
 
 
             // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
@@ -172,7 +172,7 @@ exports.config = {
             './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js'
         ],
         Reservation_Movement:[
-            // './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
+            './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
             './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js',
             './test/specs/Reservation_Movement_Testing/C_ChangeReservation__Aff_Link.js'
         ]
