@@ -69,6 +69,10 @@ class ReservationPage{
         return $('//*[@id="reservationForm"]/div/div[3]/div/div[1]/div[1]/div/input[3]');
     }
 
+    get decrement_ticket_btn(){
+        return $('//*[@id="reservationForm"]/div/div[3]/div/div[1]/div[1]/div/input[1]');
+    }
+
     async first_name_input_sel(i,isGiftCouponlink){
         let index = 4;
         if(isGiftCouponlink) index = 5;

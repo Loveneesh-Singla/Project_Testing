@@ -37,7 +37,7 @@ class GiftShopUtils{
         await browser.pause(3000);
         await GiftShop_Page.pay_btn.click();
         const TransitionalModal = await GiftShop_Page.Transitional_Modal.transitional_modal;
-        await browser.pause(1000);
+        await browser.pause(2000);
         const Tansitional_iframe = await GiftShop_Page.Transitional_Modal.transnational_modal_iframe;
         await browser.switchToFrame(Tansitional_iframe); 
         if(TransitionalModal){

@@ -40,6 +40,10 @@ class Reservation_Testing_Utils{
         await browser.pause(10000);
     }
 
+    async decrease_Num_ticekts(){
+        await ReservationPage.decrement_ticket_btn.click();
+    }
+
     async apply_gift_coupon(Gift_Coupon){
         await ReservationPage.enter_gift_code_input(Gift_Coupon)
         await ReservationPage.apply_coupon_btn();

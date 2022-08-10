@@ -133,7 +133,10 @@ exports.config = {
             './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
 
 
-            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            './test/specs/Reservations_Testing/1T_FullPay_2_1_Ticket_W.js',
+
+
+            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         Aff_Reservation:[
             './test/specs/Aff_Reservation_Testing/A1T_AFF_FP.js',
@@ -151,20 +154,22 @@ exports.config = {
             './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
         ],
         Phone_Reservations:[
-            './test/specs/Phone_Reservations_Testing/A_PH_Reserve_1__T_FP_NT.js',
-            './test/specs/Phone_Reservations_Testing/BW_PH_Reserve_1_T_FP_TA.js',
-            './test/specs/Phone_Reservations_Testing/CW_PH_Reserve_2_T_FP_TA.js',
-            './test/specs/Phone_Reservations_Testing/D_PH_Reserve_2_T_DP_TA.js',
-            './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_DP_TA.js',
-            './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_NoPay_TA.js'
+            // './test/specs/Phone_Reservations_Testing/A_PH_Reserve_1__T_FP_NT.js',
+            // './test/specs/Phone_Reservations_Testing/BW_PH_Reserve_1_T_FP_TA.js',
+            // './test/specs/Phone_Reservations_Testing/CW_PH_Reserve_2_T_FP_TA.js',
+            // './test/specs/Phone_Reservations_Testing/D_PH_Reserve_2_T_DP_TA.js',
+            // './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_DP_TA.js',
+            // './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_NoPay_TA.js',
+            // './test/specs/Phone_Reservations_Testing/FW_PH_Reserve_2_T_DP_NP_TA.js',
+            // './test/specs/Phone_Reservations_Testing/G_PH_Reserve_2_T_FP_NP_DP_NP_TA.js'
         ],
         GiftCoupon_Reservation_Testing_Prerequisites:[
             './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
         ],
         GiftCoupon_Reservation_Testing:[
-            './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
-            './test/specs/GiftCoupon_Reservation_Testing/B_BG_2T_NV_Res.js',
-            './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
+            // './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
+            // './test/specs/GiftCoupon_Reservation_Testing/B_BG_2T_NV_Res.js',
+            // './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
         ],
         Tandem_Discount_Reservations_Prerequisities:[
             './test/specs/Tandem_Packages/Create_TandemPack_Zero_Val.js'
@@ -173,7 +178,8 @@ exports.config = {
             './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT.js',
             './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
             './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
-            './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js'
+            './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js',
+            './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT_DP_DC.js'
         ],
         Reservation_Movement:[
             './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',

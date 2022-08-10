@@ -13,7 +13,7 @@ class MongoDB_Data{
             let lastName = jumperNames[i][1].charAt(0)+jumperNames[i][1].slice(1,jumperNames[i][1].length).toLowerCase();
         
             const {tandemStudent,selectedTandemPack,selectedCalenderEvent,database} = await this.getDataFromDatabase(firstName,lastName);
-            await browser.pause(1000);
+            await browser.pause(3000);
             const deositAmount = await selectedCalenderEvent.depositAmount ? selectedCalenderEvent.depositAmount : 25
             let selectedVideo = await database.collection('items').findOne({item:tandemStudent.video});
             const selectedVideoPrice = tandemStudent.video!=="none" ? selectedVideo.videoPrice : 0;
@@ -26,10 +26,10 @@ class MongoDB_Data{
 
             if(payOption === "noPay"){
                 totalPaid = 0;
-                SelectedTandemPackTax = undefined;
+                SelectedTandemPackTax = 0;
                 SelectedTandemPackPrice = 0;
                 Total_Tax_Paid =0 ;
-                selectedVideoTax = undefined
+                selectedVideoTax = 0
             }
             let taxPaid = tandemStudent.totalTaxPaid.toString().split(".")[0];
             await expect(tandemStudent.firstname).toEqual(firstName);
@@ -45,9 +45,9 @@ class MongoDB_Data{
 
     async getDataFromDatabase(firstName,lastName){
         const database = await Mongo_DB.createConnection();
-        await browser.pause(3500);
+        await browser.pause(4500);
         const tandemStudent = await database.collection('tandemstudents').findOne({firstname:firstName,lastname:lastName});
-        await browser.pause(2500);
+        await browser.pause(4500);
         const selectedTandemPack = await database.collection('items').findOne({item:tandemStudent.tandemPackage});
         await browser.pause(2500);
         const selectedCalenderEvent = await database.collection('calenderevents').findOne({eventName:selectedTandemPack.calenderEvent});

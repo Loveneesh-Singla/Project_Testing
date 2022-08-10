@@ -17,6 +17,7 @@ describe("Buy a gift card num of tickets in giftcard are 2 and no video",()=>{
         await GiftShop_Page.visit_gift_shop_page();
         await GiftShop_Utils.add_giftcard_2_cart_checkout(giftCard);
         await GiftShop_Utils.fill_user_details();
+        await browser.pause(1000);
         await GiftShop_Utils.pay_get_giftcard();
         const Gift_Coupon = await GiftShop_Utils.get_gift_card_code();
   

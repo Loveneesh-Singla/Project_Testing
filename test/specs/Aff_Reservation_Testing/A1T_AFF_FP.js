@@ -5,6 +5,7 @@ import Reservation_Testing_Utils from '../../Utils/Reservation_testing_Utils';
 
 
 describe("create aff reservation full pay",()=>{
+
     it("create aff reservation full pay", async()=>{
         const numOfTickets = 2;
         await ReservationPage.vist_reservation_page();
@@ -19,4 +20,5 @@ describe("create aff reservation full pay",()=>{
         await browser.pause(500);
         await Manifest_Reservation_Testing_Utils.verify_reservation_manifest_side(selected_date,selected_month,jumperNames,invoiceTotalVal);
     })
+    
 })
