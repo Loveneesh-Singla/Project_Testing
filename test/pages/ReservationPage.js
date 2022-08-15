@@ -126,7 +126,7 @@ class ReservationPage{
         let index;
         if(payOption==="deposit") index = 6;
         if(payOption === "giftcard") index = 8;
-        if(payOption==="full" || isGiftCoupon) index = 7;
+        if(payOption=== "full" || isGiftCoupon) index = 7;
         return await $(`//*[@id="reservationForm"]/div/div[${index}]/button`);
     }
 

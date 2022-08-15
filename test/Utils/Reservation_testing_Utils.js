@@ -113,10 +113,10 @@ class Reservation_Testing_Utils{
     }
 
 
-    async fill_transnational_payment_details(fname,lname){
+    async fill_transnational_payment_details(fname,lname,card,card_number){
         await ReservationPage.Transitional_Modal.first_name_input_sel.setValue(fname);
         await ReservationPage.Transitional_Modal.last_name_input_sel.setValue(lname);
-        await ReservationPage.Transitional_Modal.card_input_sel.setValue(4111111111111111);
+        await ReservationPage.Transitional_Modal.card_input_sel.setValue(card ? card_number : 4111111111111111);
         await ReservationPage.Transitional_Modal.month_expiry_sel.setValue("0223");
         await ReservationPage.Transitional_Modal.cvv_sel.setValue("123");
     }
@@ -159,7 +159,7 @@ class Reservation_Testing_Utils{
         // await browser.pause(500);
     }
 
-    async pay_makeReservation(payOption,onPage,isGiftCoupon){
+    async pay_makeReservation(payOption,onPage,isGiftCoupon,card,card_Number){
         let name = await this.get_fName_lname(67);
         if(onPage!=="phone") await this.accept_terms_conditions(payOption,isGiftCoupon);
         const payNowBtn = await ReservationPage.pay_now_btn(payOption,onPage,isGiftCoupon);
@@ -171,7 +171,7 @@ class Reservation_Testing_Utils{
             const Tansitional_iframe = await ReservationPage.Transitional_Modal.transnational_modal_iframe;
             await browser.switchToFrame(Tansitional_iframe); 
             if(reservationModal){
-                await this.fill_transnational_payment_details(name[0],name[1]);
+                await this.fill_transnational_payment_details(name[0],name[1],card,card_Number);
             }
             await browser.switchToParentFrame();
             // let index = 9;

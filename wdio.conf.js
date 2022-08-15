@@ -87,71 +87,71 @@ exports.config = {
 
     suites:{
         SpeacialTimeslots:[
-            './test/specs/Timeslots_Testing/I_Create_Speacial_CalenderEvents.js',
-            './test/specs/Timeslots_Testing/I2_Create_speacial_Timeslots.js',
-            './test/specs/Timeslots_Testing/I2_Check_Speacial_CalenderEvents.js'
+            // './test/specs/Timeslots_Testing/I_Create_Speacial_CalenderEvents.js',
+            // './test/specs/Timeslots_Testing/I2_Create_speacial_Timeslots.js',
+            // './test/specs/Timeslots_Testing/I2_Check_Speacial_CalenderEvents.js'
         ],
         Timeslots:[
-            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
-            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-            './test/specs/Timeslots_Testing/A2_Check_Calender_Events.js',
-            './test/specs/Timeslots_Testing/C_Check_Created_Timeslots.js',
-            './test/specs/Timeslots_Testing/D_Check_Blackout.js',
-            './test/specs/Timeslots_Testing/E_Check_Undo_Blackout.js',
-            './test/specs/Timeslots_Testing/F_Check_Blackout_Series.js',
-            './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
-            './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
+            // './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
+            // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            // './test/specs/Timeslots_Testing/A2_Check_Calender_Events.js',
+            // './test/specs/Timeslots_Testing/C_Check_Created_Timeslots.js',
+            // './test/specs/Timeslots_Testing/D_Check_Blackout.js',
+            // './test/specs/Timeslots_Testing/E_Check_Undo_Blackout.js',
+            // './test/specs/Timeslots_Testing/F_Check_Blackout_Series.js',
+            // './test/specs/Timeslots_Testing/G_Check_Delete_Timeslot.js',
+            // './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
         ],
         Reservations_Prerequisites:[
-            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
-            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-            './test/specs/Tandem_Packages/Create_Tandem_packages.js',
+            // './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
+            // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
-            './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
-            './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
-            './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
-            './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
-            './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
-            './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
-            './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
-            './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
-            './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
-            './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
-            './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
-            './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
-            './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
-            './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
-            './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
-            './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
-            './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
-            './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
-            './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
+            // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+            // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
+            // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
+            // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
+            // './test/specs/Reservations_Testing/C_Reserve_1_T_FP_NV_NT.js',
+            // './test/specs/Reservations_Testing/CW_Reserve_1_T_FP_NV_NT.js',
+            // './test/specs/Reservations_Testing/D_Reserve_1_T_FP_NV_TA.js',
+            // './test/specs/Reservations_Testing/E_Reserve_1_T_DP_NT.js',
+            // './test/specs/Reservations_Testing/EW_Reserve_1_T_DP_NT.js',
+            // './test/specs/Reservations_Testing/F_Reserve_1_T_DP_TA.js',
+            // './test/specs/Reservations_Testing/G_Reserve_2_T_FP_TA.js',
+            // './test/specs/Reservations_Testing/GW_Reserve_2_T_FP_TA.js',
+            // './test/specs/Reservations_Testing/H_Reserve_2_T_DP_TA.js',
+            // './test/specs/Reservations_Testing/I_Reserve_2_T_DP_TA_2NV.js',
+            // './test/specs/Reservations_Testing/J_Reserve_2_T_FP_TA_1NV.js',
+            // './test/specs/Reservations_Testing/JW_Reserve_2_T_FP_TA_1NV.js',
+            // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
+            // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
+            // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
       
-            './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
-            './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
-            './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
+            // './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
+            // './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
+            // './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
 
 
-            './test/specs/Reservations_Testing/1T_FullPay_2_1_Ticket_W.js',
+            // './test/specs/Reservations_Testing/1T_FullPay_2_1_Ticket_W.js',
 
 
-            './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
+            // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         Aff_Reservation:[
-            './test/specs/Aff_Reservation_Testing/A1T_AFF_FP.js',
-            './test/specs/Aff_Reservation_Testing/B2T_AFF_DP.js'
+            // './test/specs/Aff_Reservation_Testing/A1T_AFF_FP.js',
+            // './test/specs/Aff_Reservation_Testing/B2T_AFF_DP.js'
         ],
         GroupOn_Res_Prerequisites:[
-            './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
-            './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
+            // './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
+            // './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
         ],
         GroupOn_Reservations:[
-            './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
-            './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
-            './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
-            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
-            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
+            // './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
+            // './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
+            // './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
+            // './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
+            // './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
         ],
         Phone_Reservations:[
             // './test/specs/Phone_Reservations_Testing/A_PH_Reserve_1__T_FP_NT.js',
@@ -164,7 +164,7 @@ exports.config = {
             // './test/specs/Phone_Reservations_Testing/G_PH_Reserve_2_T_FP_NP_DP_NP_TA.js'
         ],
         GiftCoupon_Reservation_Testing_Prerequisites:[
-            './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
+            // './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
         ],
         GiftCoupon_Reservation_Testing:[
             // './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
@@ -172,20 +172,27 @@ exports.config = {
             // './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
         ],
         Tandem_Discount_Reservations_Prerequisities:[
-            './test/specs/Tandem_Packages/Create_TandemPack_Zero_Val.js'
+            // './test/specs/Tandem_Packages/Create_TandemPack_Zero_Val.js'
         ],
         Tandem_Discount_Reservations:[
-            './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT.js',
-            './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
-            './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
-            './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js',
-            './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT_DP_DC.js'
+            // './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT.js',
+            // './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
+            // './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
+            // './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js',
+            // './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT_DP_DC.js'
         ],
         Reservation_Movement:[
-            './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
-            './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js',
-            './test/specs/Reservation_Movement_Testing/C_ChangeReservation__Aff_Link.js'
-        ]
+            // './test/specs/Reservation_Movement_Testing/A_Aff_Reservation_Move.js',
+            // './test/specs/Reservation_Movement_Testing/B_ChangeReservation__Tandem_Link.js',
+            // './test/specs/Reservation_Movement_Testing/C_ChangeReservation__Aff_Link.js'
+        ],
+        Bad_Card_Testing_Reservation:[
+            './test/specs/Bad_Card_Testing_Reservation/1T_BC_DC.js',
+            './test/specs/Bad_Card_Testing_Reservation/1T_BC_EC.js',
+            './test/specs/Bad_Card_Testing_Reservation/1T_BC_IF.js',
+            './test/specs/Bad_Card_Testing_Reservation/1T_BC_LC.js',
+            './test/specs/Bad_Card_Testing_Reservation/1T_BC_SC.js',
+        ],
 
 
     },
