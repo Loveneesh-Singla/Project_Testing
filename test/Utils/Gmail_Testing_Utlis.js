@@ -16,10 +16,12 @@ class GmailUtils{
         await expect (transactionErrorResponse).toEqual(`Transaction Error Response: ${Error_Message}`)
     }
     async gmail_login(){
-        await Gmail_Page.emailUsername.setValue("mahimasaini@zestgeek.com");
+        //Please change as per the web scheduler back email
+        await Gmail_Page.emailUsername.setValue("test@gmail.com");
         await Gmail_Page.next_btn.click();
         await browser.pause(3000)
-        await Gmail_Page.emailPassword.setValue("Mahima@09Ind#!");
+        //enter password of email here
+        await Gmail_Page.emailPassword.setValue("give password");
         await Gmail_Page.Next_button.click();
     }
 }

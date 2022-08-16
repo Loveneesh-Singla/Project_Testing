@@ -2,9 +2,9 @@ import ReservationPage from '../../pages/ReservationPage';
 import Reservation_Testing_Utils from '../../Utils/Reservation_testing_Utils';
 import GmailUtils from '../../Utils/Gmail_Testing_Utils'
 
-describe("Try to reserve one ticket and used card is insufficient funds, checked error response in email",()=>{
+describe("Try to reserve one ticket and used card has insufficient funds, checked error response in email",()=>{
 
-    it("Try to reserve one ticket and used card is insufficient funds, checked error response in email",async()=>{
+    it("Try to reserve one ticket and used card has insufficient funds, checked error response in email",async()=>{
         let card = "Insufficient Funds";
         let card_Number = 4000000000009995;
         let Error_Message = "Funds"

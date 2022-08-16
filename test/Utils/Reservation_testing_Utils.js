@@ -113,10 +113,10 @@ class Reservation_Testing_Utils{
     }
 
 
-    async fill_transnational_payment_details(fname,lname,card,card_number){
+    async fill_transnational_payment_details(fname,lname,card,card_Number){
         await ReservationPage.Transitional_Modal.first_name_input_sel.setValue(fname);
         await ReservationPage.Transitional_Modal.last_name_input_sel.setValue(lname);
-        await ReservationPage.Transitional_Modal.card_input_sel.setValue(card ? card_number : 4111111111111111);
+        await ReservationPage.Transitional_Modal.card_input_sel.setValue(card ? card_Number : 4111111111111111);
         await ReservationPage.Transitional_Modal.month_expiry_sel.setValue("0223");
         await ReservationPage.Transitional_Modal.cvv_sel.setValue("123");
     }

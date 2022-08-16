@@ -30,7 +30,7 @@ class GiftShopUtils{
         await GiftShop_Page.set_name.setValue("test");
     }
 
-    async pay_get_giftcard(){
+    async pay_get_giftcard(card,card_Number){
         await GiftShop_Page.terms_conditions_btn.click();   
         await browser.pause(2000);
         await GiftShop_Page.accept_terms_conditions_btn.click();
@@ -41,7 +41,7 @@ class GiftShopUtils{
         const Tansitional_iframe = await GiftShop_Page.Transitional_Modal.transnational_modal_iframe;
         await browser.switchToFrame(Tansitional_iframe); 
         if(TransitionalModal){
-            await this.fill_transnational_payment_details("abcd","xyze")
+            await this.fill_transnational_payment_details("abcd","xyze",card,card_Number)
         }
         await browser.switchToParentFrame();
         await GiftShop_Page.Transitional_Modal.submit_btn.click();
@@ -58,10 +58,10 @@ class GiftShopUtils{
         return await GiftCoupon.couponCode;
     }
 
-    async fill_transnational_payment_details(fname,lname){
+    async fill_transnational_payment_details(fname,lname,card,card_Number){
         await GiftShop_Page.Transitional_Modal.first_name_input_sel.setValue(fname);
         await GiftShop_Page.Transitional_Modal.last_name_input_sel.setValue(lname);
-        await GiftShop_Page.Transitional_Modal.card_input_sel.setValue(4111111111111111);
+        await GiftShop_Page.Transitional_Modal.card_input_sel.setValue(card ? card_Number : 4111111111111111);
         await GiftShop_Page.Transitional_Modal.month_expiry_sel.setValue("0223");
         await GiftShop_Page.Transitional_Modal.cvv_sel.setValue("123");
     }

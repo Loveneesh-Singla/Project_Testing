@@ -108,7 +108,7 @@ exports.config = {
             // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
-            // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+            './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
             // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
             // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
             // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
@@ -164,10 +164,10 @@ exports.config = {
             // './test/specs/Phone_Reservations_Testing/G_PH_Reserve_2_T_FP_NP_DP_NP_TA.js'
         ],
         GiftCoupon_Reservation_Testing_Prerequisites:[
-            // './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
+            './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
         ],
         GiftCoupon_Reservation_Testing:[
-            // './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
+            './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
             // './test/specs/GiftCoupon_Reservation_Testing/B_BG_2T_NV_Res.js',
             // './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
         ],
@@ -193,6 +193,15 @@ exports.config = {
             './test/specs/Bad_Card_Testing_Reservation/1T_BC_LC.js',
             './test/specs/Bad_Card_Testing_Reservation/1T_BC_SC.js',
         ],
+        
+        Gift_Bad_Card_Testing_Reservation :[
+            './test/specs/Gift_Bad_Card_Testing_Reservation/1T_NV_BC_DC.js',
+            // './test/specs/Gift_Bad_Card_Testing_Reservation/1T_NV_BC_EC.js',
+            // './test/specs/Gift_Bad_Card_Testing_Reservation/1T_NV_BC_IF.js',
+            // './test/specs/Gift_Bad_Card_Testing_Reservation/1T_NV_BC_LC.js',
+            // './test/specs/Gift_Bad_Card_Testing_Reservation/1T_NV_BC_SC.js'
+        ]
+        
 
 
     },
