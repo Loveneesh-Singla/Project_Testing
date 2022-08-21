@@ -103,12 +103,12 @@ exports.config = {
             // './test/specs/Timeslots_Testing/H_Check_Delete_Timeslots_Series.js'
         ],
         Reservations_Prerequisites:[
-            // './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
-            // './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
-            // './test/specs/Tandem_Packages/Create_Tandem_packages.js',
+            './test/specs/Timeslots_Testing/A_Create_CalenderEvents.js',
+            './test/specs/Timeslots_Testing/B_Create_Timeslots.js',
+            './test/specs/Tandem_Packages/Create_Tandem_packages.js',
         ],
         Reservations:[
-            './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
+            // './test/specs/Reservations_Testing/A_Reserve_1_T_FP_NT.js',
             // './test/specs/Reservations_Testing/AW_Reserve_1_T_FP_NT.js',
             // './test/specs/Reservations_Testing/B_Reserve_1_T_FP_TA.js',
             // './test/specs/Reservations_Testing/BW_Reserve_1_T_FP_TA.js',
@@ -127,36 +127,31 @@ exports.config = {
             // './test/specs/Reservations_Testing/KW_Reserve_3_T_FP_TA_2NV.js',
             // './test/specs/Reservations_Testing/L_Reserve_4_T_FP_Mis.js',
             // './test/specs/Reservations_Testing/M_Reserve_4_T_DP_Mis.js',
-      
             // './test/specs/Reservations_Testing/1T_FullPay_2_Desposit.js',
             // './test/specs/Reservations_Testing/3T_FullPay_2_Deposit.js',
             // './test/specs/Reservations_Testing/2T_Deposit_2_FullPay.js',
-
-
             // './test/specs/Reservations_Testing/1T_FullPay_2_1_Ticket_W.js',
-
-
             // './test/specs/Reservations_Testing/N_Reserve_2_T_FP_TA_Help_Dev.js'
         ],
         Aff_Reservation:[
-            // './test/specs/Aff_Reservation_Testing/A1T_AFF_FP.js',
+            './test/specs/Aff_Reservation_Testing/A1T_AFF_FP.js',
             // './test/specs/Aff_Reservation_Testing/B2T_AFF_DP.js'
         ],
         GroupOn_Res_Prerequisites:[
             // './test/specs/Tandem_Packages/Create_Groupon_Tandem_Packs.js',
-            // './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
+            './test/specs/GroupOnPackages/Create_GroupOn_Pack.js'
         ],
         GroupOn_Reservations:[
             // './test/specs/GroupOn_Reservations_Testing/A_GR_1_T_NV.js',
             // './test/specs/GroupOn_Reservations_Testing/AW_GR_1_T_V.js',
-            // './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
-            // './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
+            './test/specs/GroupOn_Reservations_Testing/BW_GR_2_T_1V.js',
+            './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_2V_1VT.js',
             // './test/specs/GroupOn_Reservations_Testing/B_GR_2_T_NV.js'
         ],
         Phone_Reservations:[
             // './test/specs/Phone_Reservations_Testing/A_PH_Reserve_1__T_FP_NT.js',
             // './test/specs/Phone_Reservations_Testing/BW_PH_Reserve_1_T_FP_TA.js',
-            // './test/specs/Phone_Reservations_Testing/CW_PH_Reserve_2_T_FP_TA.js',
+            './test/specs/Phone_Reservations_Testing/CW_PH_Reserve_2_T_FP_TA.js',
             // './test/specs/Phone_Reservations_Testing/D_PH_Reserve_2_T_DP_TA.js',
             // './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_DP_TA.js',
             // './test/specs/Phone_Reservations_Testing/EW_PH_Reserve_2_T_NoPay_TA.js',
@@ -167,17 +162,17 @@ exports.config = {
             './test/specs/Gift_Cards_Testing/A_Create_GiftCards.js'
         ],
         GiftCoupon_Reservation_Testing:[
-            './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
+            // './test/specs/GiftCoupon_Reservation_Testing/A_BG_1T_NV_Res.js',
             // './test/specs/GiftCoupon_Reservation_Testing/B_BG_2T_NV_Res.js',
-            // './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
+            './test/specs/GiftCoupon_Reservation_Testing/C_BG_1T_V_Res.js'
         ],
         Tandem_Discount_Reservations_Prerequisities:[
-            // './test/specs/Tandem_Packages/Create_TandemPack_Zero_Val.js'
+            './test/specs/Tandem_Packages/Create_TandemPack_Zero_Val.js'
         ],
         Tandem_Discount_Reservations:[
             // './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT.js',
-            // './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
-            // './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
+            './test/specs/Tandem_Coupon_Reservations/B_TC_2T_$0_V_TA.js',
+            './test/specs/Tandem_Coupon_Reservations/C_TC_1T_NV_NT.js',
             // './test/specs/Tandem_Coupon_Reservations/D_TC_2T_V_TA.js',
             // './test/specs/Tandem_Coupon_Reservations/A_TC_1T_$0_NV_NT_DP_DC.js'
         ],
@@ -221,7 +216,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 4,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -232,7 +227,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 4,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true

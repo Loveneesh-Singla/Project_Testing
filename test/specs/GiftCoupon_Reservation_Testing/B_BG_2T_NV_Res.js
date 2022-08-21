@@ -13,7 +13,7 @@ describe("Buy a gift card num of tickets in giftcard are 2 and no video",()=>{
         const tandemPackages = [""];
         const payOption = "giftcard";
         const giftCard = "Test2";
-        await MongoDB.drop_collection("giftpurchases");
+        // await MongoDB.drop_collection("giftpurchases");
         await GiftShop_Page.visit_gift_shop_page();
         await GiftShop_Utils.add_giftcard_2_cart_checkout(giftCard);
         await GiftShop_Utils.fill_user_details();

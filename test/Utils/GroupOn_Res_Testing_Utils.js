@@ -8,8 +8,8 @@ class GroupResTestingUtils {
         while(true){
             await GroupOn_Res_Page.groupOnCodeInput.setValue(codes[i])
             const isValid =  await GroupOn_Res_Page.groupon_pack_header.isExisting();
-            if( isValid || i > 200 ) {
-                if(i < 200) return codes[i];
+            if( isValid || i > 400 ) {
+                if(i < 400) return codes[i];
                 break;
             };
             i++;
